@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="TRIAGE: feasibility-gated selection and monitored adaptation of embodied foundation models for a fixed physical platform.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TRIAGE">
+  <meta property="og:description" content="Check what a public checkpoint loses on your platform before fine-tuning it.">
+  <meta property="og:url" content="https://zilin-huang.github.io/Triage/">
+  <meta property="og:image" content="https://zilin-huang.github.io/Triage/assets/videos/overview_four_trips.jpg">
+  <link rel="canonical" href="https://zilin-huang.github.io/Triage/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="triage.css">
+  <script src="site-config.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>TRIAGE</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="TRIAGE home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M8 10h16M8 16h10M8 22h5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><span>TRIAGE<span class="brand-dot">.</span></span><span class="header-institution-logos" aria-hidden="true"><img class="header-logo header-logo-uw" src="assets/logos/uw-madison.png" width="19" height="30" alt=""></span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Results</a><a href="#video">Video</a><a href="#citation">Citation</a>
+      </nav>
+      <a class="nav-paper" href="#citation" data-paper-link>Read paper <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="paper-title">
+      <h1 id="paper-title">Triage <em>before</em> fine-tuning</h1>
+      <p class="subtitle">Feasibility-Gated Selection and Monitored Adaptation of Embodied Foundation Models for a Fixed Physical Platform</p>
+      <div class="authors" aria-label="Authors">
+        <a href="https://scholar.google.com/citations?user=RgO7ppoAAAAJ" rel="noopener" data-scholar-placeholder title="Google Scholar profile to be added">Zilin Huang</a>
+        <a href="https://scholar.google.com/citations?user=6m8LnLUAAAAJ" rel="noopener" data-scholar-placeholder title="Google Scholar profile to be added">Zhengyang Wan</a>
+        <a href="https://scholar.google.com/citations?user=3T-SILsAAAAJ" rel="noopener" data-scholar-placeholder title="Google Scholar profile to be added">Zihao Sheng</a>
+        <a href="https://scholar.google.com/citations?user=CR7HWjcAAAAJ" rel="noopener" data-scholar-placeholder title="Google Scholar profile to be added">Boyue Wang</a>
+        <a href="https://scholar.google.com/citations?user=5X0IRocAAAAJ" rel="noopener" data-scholar-placeholder title="Google Scholar profile to be added">Ruolin Yang</a>
+        <a href="https://scholar.google.com/citations?user=CNdSjWAAAAAJ" rel="noopener" data-scholar-placeholder title="Google Scholar profile to be added">Yuhao Luo</a>
+        <a href="https://scholar.google.com/citations?user=DPN2wc4AAAAJ" rel="noopener" data-scholar-placeholder title="Google Scholar profile to be added">Sikai Chen<sup><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Corresponding author"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></sup></a>
+      </div>
+      <p class="affiliations"><span class="affiliation-item"><img class="affiliation-logo affiliation-logo-uw" src="assets/logos/uw-madison.png" width="18" height="28" alt="" aria-hidden="true"><span>University of Wisconsin–Madison</span></span></p>
+      <p class="correspondence"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="correspondence-icon" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Corresponding author</span></p>
+      <div class="resource-links">
+        <a class="button primary" href="#" aria-disabled="true" data-paper-link><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/></svg>Paper (arXiv, coming soon)</a>
+        <a class="button" href="#" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>Code (coming soon)</a>
+        <a class="button text-button" href="#video"><span class="play-symbol" aria-hidden="true">▶</span>Watch video</a>
+      </div>
+    </section>
+
+    <section class="generation-gallery container" aria-labelledby="gallery-title">
+      <div class="gallery-heading"><div><p class="eyebrow">CLOSED LOOP ON A FULL-SCALE VEHICLE</p><h2 id="gallery-title">Nine trips on one 143 m route.</h2></div><button class="gallery-toggle" id="gallery-toggle" type="button" aria-pressed="false">Play videos</button></div>
+      <div class="generation-grid trip-grid">
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/w0_selected.jpg"><source src="assets/videos/w0_selected.mp4" type="video/mp4"></video><figcaption><b>DriveVLA-W0</b>, selected by Stage 4, front view<span class="outcome ok">REACHES THE END</span></figcaption></figure>
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/w0_takeover.jpg"><source src="assets/videos/w0_takeover.mp4" type="video/mp4"></video><figcaption><b>DriveVLA-W0</b>, its one takeover in five trips<span class="outcome fail">TAKEOVER AT 133.9 M</span></figcaption></figure>
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/ltf_challenger.jpg"><source src="assets/videos/ltf_challenger.mp4" type="video/mp4"></video><figcaption><b>LTF</b>, the challenger, three views<span class="outcome ok">REACHES THE END</span></figcaption></figure>
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/latent_wam.jpg"><source src="assets/videos/latent_wam.mp4" type="video/mp4"></video><figcaption><b>Latent-WAM</b>, passes both gates, three views<span class="outcome ok">REACHES THE END</span></figcaption></figure>
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/driveva.jpg"><source src="assets/videos/driveva.mp4" type="video/mp4"></video><figcaption><b>DriveVA</b>, highest benchmark score, fails the latency gate<span class="outcome fail">TAKEOVER AT 91.9 M</span></figcaption></figure>
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/recogdrive.jpg"><source src="assets/videos/recogdrive.mp4" type="video/mp4"></video><figcaption><b>ReCogDrive</b>, fails the latency gate<span class="outcome fail">TAKEOVER AT 51.5 M</span></figcaption></figure>
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/ltf_delay_2s.jpg"><source src="assets/videos/ltf_delay_2s.mp4" type="video/mp4"></video><figcaption><b>LTF</b>, each finished plan held 2.0 s longer<span class="outcome fail">TAKEOVER AT 59.3 M</span></figcaption></figure>
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/ltf_side_views_black.jpg"><source src="assets/videos/ltf_side_views_black.mp4" type="video/mp4"></video><figcaption><b>LTF</b>, two side views blacked out<span class="outcome fail">TAKEOVER AT 46.2 M</span></figcaption></figure>
+        <figure><video class="generation-video" controls muted playsinline preload="none" poster="assets/videos/ltf_finetuned.jpg"><source src="assets/videos/ltf_finetuned.mp4" type="video/mp4"></video><figcaption><b>LTF</b>, fine-tuned on local recordings<span class="outcome fail">TAKEOVER AT 70.8 M</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section container overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-intro"><p class="eyebrow">01 / THE PROBLEM</p><h2 id="overview-title">The top-ranked checkpoint<br>may not run on your platform.</h2></div>
+      <div class="overview-copy"><p class="large-copy">Teams that cannot train a foundation model pick a public checkpoint by benchmark rank and fine-tune it on local data. The platform is fixed first: its sensors, onboard compute and site come with the task.</p><p>We split what a checkpoint loses on a fixed platform by <strong>what can repair it</strong>. A <strong>sensing gap</strong> is information the sensors do not capture; no amount of their data closes it. A <strong>latency gap</strong> is output that arrives after the control loop needs it; it belongs to the loop, not the weights. Only a <strong>distribution gap</strong> is fine-tuning’s to repair.</p><p><strong>TRIAGE</strong> turns this split into a five-stage procedure: two gates that no score overrides, a ranking among the candidates that pass, and fine-tuning that is monitored and checked in closed loop before release.</p><div class="takeaway"><span aria-hidden="true">↳</span><p>Find out before buying data or hardware whether a checkpoint can run on the vehicle or robot you own, and what to fix if not.</p></div></div>
+    </section>
+
+    <section class="method-section" id="method" aria-labelledby="method-title">
+      <div class="container section">
+        <div class="section-heading"><div><p class="eyebrow">02 / THE APPROACH</p><h2 id="method-title">Gate first. Rank second.<br>Fine-tune under watch.</h2></div></div>
+        <figure class="paper-figure overview-figure"><a class="figure-zoom" href="assets/figures/overview.png" data-zoom aria-label="Enlarge the TRIAGE overview figure"><img src="assets/figures/overview.png" width="2596" height="1682" alt="The repairability principle: a sensing gap that no local data closes, a latency gap whose damage depends on how stale outputs are consumed, a distribution gap that local data repairs, and the five TRIAGE stages." loading="lazy"><span class="zoom-hint">View figure <span aria-hidden="true">↗</span></span></a><figcaption><span>FIGURE 1</span> The repairability principle and the five stages: gates (1–2), selection (3–4), monitored adaptation (5).</figcaption></figure>
+        <div class="method-steps">
+          <article><span class="step-index">01</span><h3>Gate on sensing and latency</h3><p>Stage 1 checks the model’s sensor contract against the platform’s cameras. Stage 2 checks the end-to-end latency at the 95th percentile, measured on the deployment hardware, against the control deadline. A failing gate names the repair it calls for.</p></article>
+          <article><span class="step-index">02</span><h3>Probe, then rank</h3><p>Stage 3 runs probes on ten minutes of local logs. Stage 4 ranks the candidates that pass both gates by target-relevant benchmark score and keeps the runner-up as challenger.</p></article>
+          <article><span class="step-index">03</span><h3>Adapt under monitoring</h3><p>Stage 5 fine-tunes on local data while monitoring the robustness it can cost, and releases a model only after a closed-loop check.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="results" aria-labelledby="results-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / THE EVIDENCE</p><h2 id="results-title">The gates’ verdicts<br>held in closed loop.</h2></div></div>
+      <div class="result-tabs" role="tablist" aria-label="Experimental results">
+        <button id="tab-latency" role="tab" aria-selected="true" aria-controls="panel-latency" tabindex="0">Latency gate</button>
+        <button id="tab-sensing" role="tab" aria-selected="false" aria-controls="panel-sensing" tabindex="-1">Sensing gate</button>
+        <button id="tab-select" role="tab" aria-selected="false" aria-controls="panel-select" tabindex="-1">Selection</button>
+        <button id="tab-adapt" role="tab" aria-selected="false" aria-controls="panel-adapt" tabindex="-1">Adaptation</button>
+      </div>
+      <div class="result-panel" id="panel-latency" role="tabpanel" aria-labelledby="tab-latency" tabindex="0">
+        <div class="result-copy"><span class="result-kicker">STAGE 2 / END-TO-END LATENCY</span><h3>The highest scores<br>arrive too late.</h3><p>Five of six candidates meet the 1.2 s deadline on inference time; only three meet it end to end on the vehicle. The two highest-scoring candidates, DriveVA and ReCogDrive, do not, and neither completed a closed-loop trip.</p><p>DriveVA’s end-to-end latency was <strong>1.580 s</strong> at the 95th percentile, over the deadline on every plan.</p><div class="bar-chart wide" role="img" aria-label="Trips that reached the end of the route: DriveVA 0 of 5, ReCogDrive 0 of 5, LTF 5 of 5, Latent-WAM 5 of 5."><div><span>DriveVA</span><div class="bar-track"><i style="--value:0%"></i></div><b>0/5</b></div><div><span>ReCogDrive</span><div class="bar-track"><i style="--value:0%"></i></div><b>0/5</b></div><div class="highlight-bar"><span>LTF</span><div class="bar-track"><i style="--value:100%"></i></div><b>5/5</b></div><div class="highlight-bar"><span>Latent-WAM</span><div class="bar-track"><i style="--value:100%"></i></div><b>5/5</b></div></div><div class="result-callout">On Bench2Drive, a deadline below a leading closed-loop model’s latency makes it collide on 80 to 90% of routes.</div></div>
+        <figure class="result-media"><div class="video-slot" data-video-slot="latencyGate"><div class="video-placeholder" role="img" aria-label="DriveVA closed-loop trip video placeholder"><span class="placeholder-play" aria-hidden="true">▶</span><p>DriveVA closed-loop trip</p><span>Video coming soon</span></div><video controls muted playsinline preload="metadata" hidden aria-label="DriveVA closed-loop trip video"></video></div></figure>
+      </div>
+      <div class="result-panel" id="panel-sensing" role="tabpanel" aria-labelledby="tab-sensing" tabindex="0" hidden>
+        <div class="result-copy"><span class="result-kicker">STAGE 1 / SENSOR CONTRACT</span><h3>Field of view is gated.<br>Resolution is not.</h3><p>At equal pixels, losing field of view moves plans <strong>2.2 to 5.7 times</strong> more than losing resolution (1.6 to 2.4 in manipulation), and all four Bench2Drive models score lower under the crop than under the downscale in closed loop.</p><p>On the vehicle, the factory 24.7° camera failed every sighted sensor contract; one added 102° camera, reprojected to a 64° view, re-admitted the six monocular candidates.</p><div class="bar-chart wide" role="img" aria-label="Trips that reached the end of the route: LTF with three views 5 of 5, LTF with side views blacked out 0 of 2."><div class="highlight-bar"><span>LTF, three views</span><div class="bar-track"><i style="--value:100%"></i></div><b>5/5</b></div><div><span>LTF, side views black</span><div class="bar-track"><i style="--value:0%"></i></div><b>0/2</b></div></div><div class="result-callout">With its two side views blacked out, LTF left its lane in both trips, after 46.2 and 48.0 m.</div></div>
+        <figure class="result-media"><div class="video-slot" data-video-slot="sensingGate"><div class="video-placeholder" role="img" aria-label="LTF with side views blacked out video placeholder"><span class="placeholder-play" aria-hidden="true">▶</span><p>LTF with side views blacked out</p><span>Video coming soon</span></div><video controls muted playsinline preload="metadata" hidden aria-label="LTF with side views blacked out video"></video></div></figure>
+      </div>
+      <div class="result-panel" id="panel-select" role="tabpanel" aria-labelledby="tab-select" tabindex="0" hidden>
+        <div class="result-copy"><span class="result-kicker">STAGES 3–4 / GATE-RESTRICTED RANKING</span><h3>Rank only<br>what can run.</h3><p>Picking by benchmark score violates a gate in <strong>2 of 4</strong> deployment profiles. On our vehicle that pick, DriveVA, completed 0 of 5 trips.</p><p>Among the candidates that pass both gates, Stage 4 selects DriveVLA-W0 with LTF as challenger. DriveVLA-W0 reached the end in <strong>4 of 5</strong> trips, with one takeover at 133.9 m; LTF reached it in 5 of 5.</p><div class="bar-chart wide" role="img" aria-label="Trips that reached the end of the route: score-first pick DriveVA 0 of 5, TRIAGE pick DriveVLA-W0 4 of 5, challenger LTF 5 of 5."><div><span>Score-first pick</span><div class="bar-track"><i style="--value:0%"></i></div><b>0/5</b></div><div class="highlight-bar"><span>TRIAGE pick</span><div class="bar-track"><i style="--value:80%"></i></div><b>4/5</b></div><div class="highlight-bar"><span>Challenger</span><div class="bar-track"><i style="--value:100%"></i></div><b>5/5</b></div></div></div>
+        <figure class="result-media"><div class="video-slot" data-video-slot="selection"><div class="video-placeholder" role="img" aria-label="DriveVLA-W0 closed-loop trip video placeholder"><span class="placeholder-play" aria-hidden="true">▶</span><p>DriveVLA-W0 closed-loop trip</p><span>Video coming soon</span></div><video controls muted playsinline preload="metadata" hidden aria-label="DriveVLA-W0 closed-loop trip video"></video></div></figure>
+      </div>
+      <div class="result-panel" id="panel-adapt" role="tabpanel" aria-labelledby="tab-adapt" tabindex="0" hidden>
+        <div class="result-copy"><span class="result-kicker">STAGE 5 / MONITORED ADAPTATION</span><h3>Better offline.<br>Withheld in closed loop.</h3><p>Fine-tuned on 2,667 local samples, LTF lowered its held-out displacement error from <strong>1.12 m</strong> to between <strong>0.84 and 0.88 m</strong> in three seeds, and neither monitor fired.</p><p>In closed loop it drifted out of its lane in both trips, at 70.8 and 73.2 m, and the closed-loop check withheld it.</p><div class="result-callout">Stage 5 releases a model only after a closed-loop check.</div></div>
+        <figure class="result-media"><div class="video-slot" data-video-slot="adaptation"><div class="video-placeholder" role="img" aria-label="Fine-tuned LTF closed-loop trip video placeholder"><span class="placeholder-play" aria-hidden="true">▶</span><p>Fine-tuned LTF closed-loop trip</p><span>Video coming soon</span></div><video controls muted playsinline preload="metadata" hidden aria-label="Fine-tuned LTF closed-loop trip video"></video></div></figure>
+      </div>
+      <div class="figure-stack">
+        <figure class="paper-figure"><a class="figure-zoom" href="assets/figures/trajectories.png" data-zoom aria-label="Enlarge the trajectory figure"><img src="assets/figures/trajectories.png" width="2990" height="936" alt="Driven paths of all closed-loop trips against the reference route, with lateral offsets." loading="lazy"><span class="zoom-hint">View figure <span aria-hidden="true">↗</span></span></a><figcaption><span>TRAJECTORIES</span> Driven paths of all closed-loop trips against the reference route.</figcaption></figure>
+        <figure class="paper-figure"><a class="figure-zoom" href="assets/figures/takeover_gallery.jpg" data-zoom aria-label="Enlarge the takeover gallery"><img src="assets/figures/takeover_gallery.jpg" width="3416" height="1161" alt="Front-camera frame at each of the 17 takeovers, labelled with configuration and distance travelled." loading="lazy"><span class="zoom-hint">View figure <span aria-hidden="true">↗</span></span></a><figcaption><span>TAKEOVERS</span> Front camera at each of the 17 takeovers, with configuration and distance travelled.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="video-section" id="video" aria-labelledby="video-title">
+      <div class="section container">
+        <div class="section-heading"><div><p class="eyebrow light-label">04 / VIDEO</p><h2 id="video-title">One model, one change at a time.</h2></div></div>
+        <div class="video-slot showcase-slot" data-video-slot="showcase"><div class="video-placeholder" role="img" aria-label="Research video placeholder"><span class="placeholder-play" aria-hidden="true">▶</span><p>Research video</p><span>Video coming soon</span></div><video controls muted playsinline preload="metadata" poster="assets/videos/overview_four_trips.jpg" hidden aria-label="Four LTF trips side by side"></video></div>
+        <p class="video-description">Four trips of LTF on the same route, side by side from the moment of engagement. A is the unchanged model. B holds each finished plan 2.0 s longer. C blacks out the two side views. D uses the weights fine-tuned on local recordings. A reaches the end of the route; B, C and D end in a takeover at 59.3, 46.2 and 70.8 m.</p>
+        <figure class="incabin"><video controls muted playsinline preload="none" poster="assets/videos/in_cabin.jpg"><source src="assets/videos/in_cabin.mp4" type="video/mp4"></video><figcaption>In-cabin view: the steering wheel turns under the controller with DriveVA in control at about 1.5 m/s.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section container abstract-section" aria-labelledby="abstract-title"><div class="section-intro"><p class="eyebrow">IN THE AUTHORS’ WORDS</p><h2 id="abstract-title">Abstract</h2></div><div class="abstract-copy"><p>Embodied foundation models are increasingly deployed by selection: a practitioner picks a public checkpoint by benchmark rank and fine-tunes it on local data. The platform is fixed before the model is chosen: its sensors, onboard compute and operating site are set by the task, and at the start there is little or no local data. We ask what such a checkpoint loses on a fixed physical platform and which part of the loss local data can buy back. Our answer is to split the gap by <em>what can repair it</em>. A sensing gap, information the sensors do not capture, cannot be closed with their data; a latency gap, output arriving after the control loop needs it, belongs to the loop, not the weights; only a distribution gap is fine-tuning’s to repair. We turn this into TRIAGE, a procedure for <em>feasibility-gated selection</em> and <em>monitored adaptation</em> in five stages: gates on the sensor contract and on end-to-end latency that no score can override, probes on ten minutes of local logs, a ranking by target-relevant score among the candidates that pass, and fine-tuning that is monitored and checked in closed loop before release. On driving benchmarks, a deadline below a leading closed-loop model’s latency makes it collide on 80 to 90% of routes, and losing field of view moves plans 2.2 to 5.7 times more than losing resolution at equal pixels (1.6 to 2.4 in manipulation) and costs more driving score in closed loop. Local frames close 75% of a stability gap but raise perturbation sensitivity at small budgets, fine-tuning removes more of a moderate crop’s cost than of a strong crop’s, and picking by score violates a gate in two of four deployment profiles. On a full-scale vehicle, the factory camera failed the sensing gate and an added camera repaired it. The latency gate, applied to the end-to-end latency measured on board, removed the two highest-scoring candidates, neither of which completed a closed-loop trip. The selected model passed closed-loop acceptance in 4 of 5 trips, and the closed-loop check withheld a fine-tuned model that had improved offline. TRIAGE lets organizations that cannot train foundation models from scratch find out, before buying data or hardware, whether a public checkpoint can run on the robot or vehicle they own, and what to fix if not.</p></div></section>
+
+    <section class="citation-section" id="citation" aria-labelledby="citation-title"><div class="container section"><div class="section-heading"><div><p class="eyebrow">05 / BUILD ON THIS WORK</p><h2 id="citation-title">Citation</h2></div><div class="citation-actions"><a class="inline-link" href="citation.bib" download>Download .bib ↓</a><button class="button copy-button" id="copy-citation" type="button">Copy BibTeX <span aria-hidden="true">⧉</span></button></div></div><pre class="citation-code"><code id="bibtex">@article{huang2026triage,
+  title = {Triage Before Fine-Tuning: Feasibility-Gated Selection and Monitored Adaptation of Embodied Foundation Models for a Fixed Physical Platform},
+  author = {Huang, Zilin and Wan, Zhengyang and Sheng, Zihao and Wang, Boyue and Yang, Ruolin and Luo, Yuhao and Chen, Sikai},
+  year = {2026},
+  journal = {arXiv preprint}
+}</code></pre><p id="copy-status" class="copy-status" role="status" aria-live="polite"></p></div></section>
+  </main>
+
+  <footer class="site-footer container"><a class="brand footer-brand" href="#top">TRIAGE<span class="brand-dot">.</span></a><p>Triage Before Fine-Tuning<br><span>University of Wisconsin–Madison</span></p><a class="inline-link" href="#top">Back to top ↑</a></footer>
+  <dialog id="figure-dialog" aria-labelledby="dialog-title"><div class="dialog-toolbar"><span id="dialog-title">Paper figure</span><button id="close-figure" type="button" aria-label="Close figure">Close <span aria-hidden="true">×</span></button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div></dialog>
+</body>
+</html>

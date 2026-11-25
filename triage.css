@@ -1,0 +1,21 @@
+/* TRIAGE additions on top of the shared project-page stylesheet */
+.hero .subtitle{font-size:20px;line-height:1.5;color:#3e5056;max-width:900px;margin:-14px auto 30px;letter-spacing:-.2px}
+.generation-grid.trip-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 22px}
+.trip-grid .generation-video{aspect-ratio:1920/668;background:#101f27}
+.trip-grid figcaption{font-size:14px;line-height:1.55;color:#3e5056;margin-top:9px}
+.trip-grid figcaption b{color:var(--ink);font-weight:650}
+.trip-grid .outcome{font-family:var(--mono);font-size:11px;letter-spacing:.04em;margin-left:6px;white-space:nowrap}
+.trip-grid .outcome.ok{color:#2f7a57}.trip-grid .outcome.fail{color:var(--accent)}
+.video-slot video{aspect-ratio:1920/668}
+.showcase-slot video{aspect-ratio:1280/1112;max-height:86vh}
+.showcase-slot{max-width:980px;margin-inline:auto}
+.video-section .video-description{font-size:15px;line-height:1.7;max-width:980px;margin:22px auto 0}
+.bar-chart.wide>div{grid-template-columns:150px 1fr 38px;font-size:12px}
+.figure-stack{display:grid;gap:26px;margin-top:46px}
+.paper-figure figcaption{font-size:13px}
+.paper-figure figcaption>span{font-size:11px}
+.button[aria-disabled=true]{opacity:.55;cursor:default;pointer-events:none}
+.incabin{max-width:720px;margin:40px auto 0}
+.incabin video{width:100%;aspect-ratio:960/544;border-radius:8px;background:#101f27}
+.incabin figcaption{color:#b6c7ca;font-size:14px;margin-top:10px;line-height:1.6}
+@media(max-width:760px){.generation-grid.trip-grid{grid-template-columns:1fr}.hero .subtitle{font-size:16px}.bar-chart.wide>div{grid-template-columns:118px 1fr 34px}}
