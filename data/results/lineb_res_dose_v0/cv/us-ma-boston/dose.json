@@ -1,0 +1,26 @@
+{
+  "exp_id": "lineb_res_dose_v0",
+  "decision_packet": "docs/LINEB_DXD2_FOV_DOSE_2026-08-19.md",
+  "agent": "cv",
+  "city": "us-ma-boston",
+  "n_frames": 120,
+  "keep_ratios": [
+    0.75,
+    0.5,
+    0.33
+  ],
+  "mean_displacement_m": {
+    "0.75": 0.0,
+    "0.5": 0.0,
+    "0.33": 0.0
+  },
+  "n_per_dose": {
+    "0.75": 120,
+    "0.5": 120,
+    "0.33": 120
+  },
+  "resolution_response_auc": 0.0,
+  "adapter_note": "scripts/64 harness; downscale-upscale on all consumed frames",
+  "namespace": "open_loop cross-source; never enters m4/G2",
+  "repo_commit": "12435a4c10b0c0a6545474ed8fd6f3246e6f284e"
+}

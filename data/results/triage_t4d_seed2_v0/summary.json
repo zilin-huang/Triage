@@ -1,0 +1,252 @@
+{
+ "exp_id": "triage_t4d_seed2_v0",
+ "decision_packet": "docs/TRIAGE_DTR4_HARDENING_2026-08-21.md",
+ "upstream_packet": "docs/TRIAGE_DTR1_REPAIR_OPERATOR_CROSS_2026-08-21.md",
+ "seed1": {
+  "variant": "er2_d20k",
+  "sample_seed": 20260821,
+  "rows": "outputs/triage_er2_dose_v0/rows"
+ },
+ "seed2": {
+  "variant": "t4d_seed2_d20k",
+  "sample_seed": 20260822
+ },
+ "seed_comparison": {
+  "R1": {
+   "field": "gamma_response_auc",
+   "per_city": {
+    "sg-one-north": {
+     "seed1": 0.28402700350021143,
+     "seed2": 0.2731628863169311
+    },
+    "us-ma-boston": {
+     "seed1": 0.28328584079406877,
+     "seed2": 0.38772767924895335
+    },
+    "us-nv-las-vegas-strip": {
+     "seed1": 0.2253771289194039,
+     "seed2": 0.24967186604746908
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "seed1": 0.2888773084244448,
+     "seed2": 0.3341996433646731
+    }
+   },
+   "mean4_seed1": 0.27039182040953225,
+   "mean4_seed2": 0.31119051874450665,
+   "abs_diff": 0.040798698334974404,
+   "rel_diff": 0.1508873244507958
+  },
+  "R2": {
+   "field": "jpeg_response_auc",
+   "per_city": {
+    "sg-one-north": {
+     "seed1": 0.13995287628680309,
+     "seed2": 0.12290442598235121
+    },
+    "us-ma-boston": {
+     "seed1": 0.18756100420848398,
+     "seed2": 0.16031991151564215
+    },
+    "us-nv-las-vegas-strip": {
+     "seed1": 0.1188277325655632,
+     "seed2": 0.10247667801608429
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "seed1": 0.10958916445966813,
+     "seed2": 0.10245790541761826
+    }
+   },
+   "mean4_seed1": 0.1389826943801296,
+   "mean4_seed2": 0.12203973023292397,
+   "abs_diff": -0.01694296414720564,
+   "rel_diff": -0.12190700592453027
+  },
+  "R3": {
+   "field": "traj_diff_norm_mean",
+   "per_city": {
+    "sg-one-north": {
+     "seed1": 0.7498903128170827,
+     "seed2": 0.7622541321535431
+    },
+    "us-ma-boston": {
+     "seed1": 0.6660026237015095,
+     "seed2": 0.6450746367429895
+    },
+    "us-nv-las-vegas-strip": {
+     "seed1": 0.5077878495095163,
+     "seed2": 0.44566508427295115
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "seed1": 0.6192589696616544,
+     "seed2": 0.6010860188966013
+    }
+   },
+   "mean4_seed1": 0.6357349389224407,
+   "mean4_seed2": 0.6135199680165212,
+   "abs_diff": -0.022214970905919507,
+   "rel_diff": -0.03494376279455945
+  },
+  "R4_l2_all": {
+   "per_city": {
+    "sg-one-north": {
+     "seed1": 1.3526208369018875,
+     "seed2": 1.3305982179826479
+    },
+    "us-ma-boston": {
+     "seed1": 1.6851909127658413,
+     "seed2": 1.5560225642786103
+    },
+    "us-nv-las-vegas-strip": {
+     "seed1": 1.1418266225314584,
+     "seed2": 0.9346756991654349
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "seed1": 1.4329338655999633,
+     "seed2": 1.4362386709903951
+    }
+   },
+   "mean4_seed1": 1.4031430594497878,
+   "mean4_seed2": 1.314383788104272,
+   "abs_diff": -0.08875927134551587,
+   "rel_diff": -0.06325746384001707
+  },
+  "R4_l2_turn": {
+   "per_city": {
+    "sg-one-north": {
+     "seed1": 1.6431033710638683,
+     "seed2": 1.5376354394377105
+    },
+    "us-ma-boston": {
+     "seed1": 1.972111097820427,
+     "seed2": 1.9184271945901539
+    },
+    "us-nv-las-vegas-strip": {
+     "seed1": null,
+     "seed2": null
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "seed1": 1.9306349985061153,
+     "seed2": 1.8351543186412704
+    }
+   },
+   "mean4_seed1": null,
+   "mean4_seed2": null,
+   "abs_diff": null,
+   "rel_diff": null
+  }
+ },
+ "verdict_sensitivity": {
+  "note": "criteria UNCHANGED (D-TR1 s3); seed-2 d20k value substituted into the E-TR2-1/E-TR2-2 computations; any flip is reported, not adjudicated away",
+  "components": {
+   "R1": {
+    "seed1": {
+     "sequence_m0_d1k_d5k_d20k": [
+      0.2047446533661626,
+      0.4858896390580775,
+      0.3642526219184886,
+      0.27039182040953225
+     ],
+     "closure_at_20k": -0.46903139458314,
+     "monotone_converging": false,
+     "meets_ETR2_1_component": false
+    },
+    "seed2": {
+     "sequence_m0_d1k_d5k_d20k": [
+      0.2047446533661626,
+      0.4858896390580775,
+      0.3642526219184886,
+      0.31119051874450665
+     ],
+     "closure_at_20k": -0.7605271473943437,
+     "monotone_converging": false,
+     "meets_ETR2_1_component": false
+    }
+   },
+   "R2": {
+    "seed1": {
+     "sequence_m0_d1k_d5k_d20k": [
+      0.09036073662168964,
+      0.303111344529506,
+      0.2023049715069945,
+      0.1389826943801296
+     ],
+     "closure_at_20k": -0.8507090985099274,
+     "monotone_converging": false,
+     "meets_ETR2_1_component": false
+    },
+    "seed2": {
+     "sequence_m0_d1k_d5k_d20k": [
+      0.09036073662168964,
+      0.303111344529506,
+      0.2023049715069945,
+      0.12203973023292397
+     ],
+     "closure_at_20k": -0.5542682635405995,
+     "monotone_converging": false,
+     "meets_ETR2_1_component": false
+    }
+   },
+   "R3": {
+    "seed1": {
+     "sequence_m0_d1k_d5k_d20k": [
+      1.954763509231128,
+      1.1707969608710604,
+      0.8690553023214115,
+      0.6357349389224407
+     ],
+     "closure_at_20k": 0.7527397314375431,
+     "monotone_converging": true,
+     "meets_ETR2_1_component": true
+    },
+    "seed2": {
+     "sequence_m0_d1k_d5k_d20k": [
+      1.954763509231128,
+      1.1707969608710604,
+      0.8690553023214115,
+      0.6135199680165212
+     ],
+     "closure_at_20k": 0.7654173122041988,
+     "monotone_converging": true,
+     "meets_ETR2_1_component": true
+    }
+   }
+  },
+  "E_TR2_1": {
+   "rule": ">=2 of R1-R3 monotone-converging with >=50% closure at 20k (4-city means)",
+   "seed1_n_component_pass": 1,
+   "seed2_n_component_pass": 1,
+   "seed1_pass": false,
+   "seed2_pass": false,
+   "flipped_by_seed2": false
+  },
+  "E_TR2_2": {
+   "rule": "all-frame L2@2s monotone non-increasing with dose and lower at 20k than zero-shot",
+   "detail": {
+    "seed1": {
+     "sequence": [
+      7.99529430432596,
+      3.317399062472922,
+      2.079071165209277,
+      1.4031430594497878
+     ],
+     "pass": true
+    },
+    "seed2": {
+     "sequence": [
+      7.99529430432596,
+      3.317399062472922,
+      2.079071165209277,
+      1.314383788104272
+     ],
+     "pass": true
+    }
+   },
+   "seed1_pass": true,
+   "seed2_pass": true,
+   "flipped_by_seed2": false
+  }
+ },
+ "complete": true,
+ "repo_commit": "1d3d2f1803c2f505b546eaacec371b5263b8405d"
+}

@@ -1,0 +1,174 @@
+{
+  "exp_id": "lineb_minig2_exam_v0",
+  "decision_packet": "docs/LINEB_DB3_MINIG2_PACKET_2026-08-17.md",
+  "namespace": "open_loop cross-source; never enters m4/G2",
+  "candidates": [
+    "autovla",
+    "curious",
+    "cv",
+    "diffusiondrive",
+    "ego_mlp",
+    "ltf",
+    "recogdrive",
+    "transfuser"
+  ],
+  "n_rows": 32,
+  "row_problems": [],
+  "feature_order": [
+    "z_appr_ref",
+    "z_geom_ref",
+    "z_behav_ref",
+    "traj_diff_norm_mean",
+    "traj_diff_norm_p95",
+    "plan_jitter_lowband_power",
+    "kinematic_violation_rate",
+    "invalid_output_rate",
+    "gamma_response_auc",
+    "jpeg_response_auc"
+  ],
+  "folds": [
+    {
+      "held_city": "sg-one-north",
+      "family": "mixed_effects",
+      "family_scores": {
+        "stage1_tuned": 0.015241,
+        "mixed_effects": 0.007726,
+        "delta_gp": 0.016614,
+        "monotone_gbt": 0.055068
+      },
+      "selected": "autovla",
+      "selected_pdms": 0.8250615745750238,
+      "king": "curious",
+      "king_pdms": 0.8592901842241907,
+      "regret": 0.03422860964916685,
+      "naive_regret": 0.0023396777436356375,
+      "safety_violation": false,
+      "predictions": {
+        "cv": 0.32881930799917575,
+        "ego_mlp": 0.7201048724725158,
+        "transfuser": 0.8522865508323036,
+        "ltf": 0.8719957203390357,
+        "diffusiondrive": 0.8862563042535205,
+        "recogdrive": 0.9105258962223092,
+        "curious": 0.9118994137885155,
+        "autovla": 0.9133024770273832
+      }
+    },
+    {
+      "held_city": "us-ma-boston",
+      "family": "mixed_effects",
+      "family_scores": {
+        "stage1_tuned": 0.019205,
+        "mixed_effects": 0.007711,
+        "delta_gp": 0.040682,
+        "monotone_gbt": 0.056908
+      },
+      "selected": "recogdrive",
+      "selected_pdms": 0.892642109709099,
+      "king": "autovla",
+      "king_pdms": 0.9007805070833932,
+      "regret": 0.008138397374294226,
+      "naive_regret": 0.008138397374294226,
+      "safety_violation": false,
+      "predictions": {
+        "cv": 0.35629148671894273,
+        "ego_mlp": 0.7151628256752565,
+        "transfuser": 0.8781315610431615,
+        "ltf": 0.876626302743892,
+        "diffusiondrive": 0.9088480363374736,
+        "recogdrive": 0.9350814690463708,
+        "curious": 0.9250107027725192,
+        "autovla": 0.8994610608685132
+      }
+    },
+    {
+      "held_city": "us-nv-las-vegas-strip",
+      "family": "mixed_effects",
+      "family_scores": {
+        "stage1_tuned": 0.007854,
+        "mixed_effects": 0.004759,
+        "delta_gp": 0.034135,
+        "monotone_gbt": 0.053548
+      },
+      "selected": "curious",
+      "selected_pdms": 0.9360060635288406,
+      "king": "recogdrive",
+      "king_pdms": 0.9468426306082132,
+      "regret": 0.010836567079372528,
+      "naive_regret": 0.0,
+      "safety_violation": false,
+      "predictions": {
+        "cv": 0.21232550983888399,
+        "ego_mlp": 0.48196504204792256,
+        "transfuser": 0.6910927514218674,
+        "ltf": 0.6753614438643989,
+        "diffusiondrive": 0.7396137488528147,
+        "recogdrive": 0.7464083238192706,
+        "curious": 0.7589881228716027,
+        "autovla": 0.7400142270876466
+      }
+    },
+    {
+      "held_city": "us-pa-pittsburgh-hazelwood",
+      "family": "mixed_effects",
+      "family_scores": {
+        "stage1_tuned": 0.012793,
+        "mixed_effects": 0.008379,
+        "delta_gp": 0.036904,
+        "monotone_gbt": 0.05866
+      },
+      "selected": "autovla",
+      "selected_pdms": 0.887170645583078,
+      "king": "recogdrive",
+      "king_pdms": 0.8879349073094623,
+      "regret": 0.0007642617263843299,
+      "naive_regret": 0.0,
+      "safety_violation": false,
+      "predictions": {
+        "cv": 0.35706355471050305,
+        "ego_mlp": 0.7351484326660538,
+        "transfuser": 0.8683710117429139,
+        "ltf": 0.8785349437913735,
+        "diffusiondrive": 0.8980376596345283,
+        "recogdrive": 0.9317659783946483,
+        "curious": 0.9305988191982608,
+        "autovla": 0.9724858161260221
+      }
+    }
+  ],
+  "mean_regret_predictor": 0.013491958957304484,
+  "mean_regret_naive_champion": 0.002619518779482466,
+  "safety_violation_any": false,
+  "E_B3_1_pass": false,
+  "degenerated_to_global_no1": false,
+  "probe_discrimination_kings": {
+    "recogdrive": {
+      "traj_diff_norm_mean": 0.255,
+      "traj_diff_norm_p95": 0.184,
+      "plan_jitter_lowband_power": 0.327,
+      "kinematic_violation_rate": 1.49,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.131,
+      "jpeg_response_auc": 0.121
+    },
+    "curious": {
+      "traj_diff_norm_mean": 0.408,
+      "traj_diff_norm_p95": 0.438,
+      "plan_jitter_lowband_power": 0.341,
+      "kinematic_violation_rate": 0.0,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.266,
+      "jpeg_response_auc": 0.622
+    },
+    "autovla": {
+      "traj_diff_norm_mean": 0.498,
+      "traj_diff_norm_p95": 0.842,
+      "plan_jitter_lowband_power": 0.441,
+      "kinematic_violation_rate": 1.421,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.218,
+      "jpeg_response_auc": 0.248
+    }
+  },
+  "repo_commit": "a9bbebf453163ff8882482b88da0c3d01e5371df"
+}

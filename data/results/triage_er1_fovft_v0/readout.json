@@ -1,0 +1,493 @@
+{
+ "exp_id": "triage_er1_fovft_v0",
+ "decision_packet": "docs/TRIAGE_DTR1_REPAIR_OPERATOR_CROSS_2026-08-21.md",
+ "carrier": "tcp_front (scripts/57 pipeline verbatim)",
+ "tcp_ckpt": "/work/checkpoints/tcp_b2d/tcp_b2d.ckpt",
+ "fov_keep": 0.6,
+ "fov_impl": "scripts/72 fov_apply (toolkit fov_crop + resize back), applied on the 1600x900 format-converted images before the frozen preprocess",
+ "gt_frame": "TCP model frame x fwd / y RIGHT; inverse of scripts/57 output y-flip",
+ "optimizer": {
+  "name": "AdamW",
+  "lr": 0.0001,
+  "weight_decay": 0.01,
+  "batch_size": 32,
+  "epochs": 5,
+  "schedule": "cosine",
+  "precision": "fp32"
+ },
+ "trainable_modules": [
+  "perception",
+  "measurements",
+  "join_traj",
+  "decoder_traj",
+  "output_traj"
+ ],
+ "sample": "E-R2 20k manifest (same frames, same seed 20260821)",
+ "env": "conda env b2d_tcp (torch 2.4.1)",
+ "repo_commit": "352dc5ae6c9e264a1b738c1365882a5310d757b5",
+ "namespace": "triage repair experiments; never navtest PDMS",
+ "notes": [],
+ "sign_diagnostic": {
+  "agreement": 1.0,
+  "n_turning": 20,
+  "threshold": 0.8,
+  "frames": [
+   {
+    "city": "us-pa-pittsburgh-hazelwood",
+    "index": 8559,
+    "dyaw_deg": 46.55,
+    "gt_left_last_m": 3.538
+   },
+   {
+    "city": "us-pa-pittsburgh-hazelwood",
+    "index": 1740,
+    "dyaw_deg": 2.78,
+    "gt_left_last_m": 0.5
+   },
+   {
+    "city": "us-ma-boston",
+    "index": 2291,
+    "dyaw_deg": -27.05,
+    "gt_left_last_m": -1.0
+   },
+   {
+    "city": "sg-one-north",
+    "index": 7745,
+    "dyaw_deg": -15.97,
+    "gt_left_last_m": -0.88
+   },
+   {
+    "city": "us-pa-pittsburgh-hazelwood",
+    "index": 6347,
+    "dyaw_deg": -9.72,
+    "gt_left_last_m": -1.174
+   },
+   {
+    "city": "us-pa-pittsburgh-hazelwood",
+    "index": 6528,
+    "dyaw_deg": -10.06,
+    "gt_left_last_m": -0.811
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 19021,
+    "dyaw_deg": 12.06,
+    "gt_left_last_m": 0.97
+   },
+   {
+    "city": "us-pa-pittsburgh-hazelwood",
+    "index": 11699,
+    "dyaw_deg": 5.22,
+    "gt_left_last_m": 0.429
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 21935,
+    "dyaw_deg": -3.73,
+    "gt_left_last_m": -0.641
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 10895,
+    "dyaw_deg": -3.44,
+    "gt_left_last_m": -0.252
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 21419,
+    "dyaw_deg": 8.77,
+    "gt_left_last_m": 0.405
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 3504,
+    "dyaw_deg": 2.87,
+    "gt_left_last_m": 0.74
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 24456,
+    "dyaw_deg": -2.47,
+    "gt_left_last_m": -0.456
+   },
+   {
+    "city": "us-pa-pittsburgh-hazelwood",
+    "index": 1748,
+    "dyaw_deg": -3.56,
+    "gt_left_last_m": -0.319
+   },
+   {
+    "city": "us-ma-boston",
+    "index": 8995,
+    "dyaw_deg": 3.73,
+    "gt_left_last_m": 0.293
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 17895,
+    "dyaw_deg": 19.0,
+    "gt_left_last_m": 1.857
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 8237,
+    "dyaw_deg": 16.09,
+    "gt_left_last_m": 0.858
+   },
+   {
+    "city": "sg-one-north",
+    "index": 4864,
+    "dyaw_deg": 20.89,
+    "gt_left_last_m": 0.711
+   },
+   {
+    "city": "us-nv-las-vegas-strip",
+    "index": 18620,
+    "dyaw_deg": 15.67,
+    "gt_left_last_m": 0.869
+   },
+   {
+    "city": "sg-one-north",
+    "index": 4175,
+    "dyaw_deg": -3.2,
+    "gt_left_last_m": -0.571
+   }
+  ]
+ },
+ "status": "success",
+ "stage": "readout",
+ "variants": {
+  "zeroshot_native": {
+   "per_city": {
+    "sg-one-north": {
+     "all": {
+      "mean_l2_at_2s": 3.4869441212953087,
+      "n": 1189
+     },
+     "turn": {
+      "mean_l2_at_2s": 3.5737762459450297,
+      "n": 144
+     },
+     "straight": {
+      "mean_l2_at_2s": 3.4749787376115195,
+      "n": 1045
+     },
+     "n_skipped_no_gt_or_target": 11
+    },
+    "us-ma-boston": {
+     "all": {
+      "mean_l2_at_2s": 4.10012034777411,
+      "n": 1164
+     },
+     "turn": {
+      "mean_l2_at_2s": 2.1941911710993103,
+      "n": 46
+     },
+     "straight": {
+      "mean_l2_at_2s": 4.178539616224057,
+      "n": 1118
+     },
+     "n_skipped_no_gt_or_target": 36
+    },
+    "us-nv-las-vegas-strip": {
+     "all": {
+      "mean_l2_at_2s": 4.718149187673892,
+      "n": 1152
+     },
+     "turn": {
+      "mean_l2_at_2s": null,
+      "n": 0
+     },
+     "straight": {
+      "mean_l2_at_2s": 4.718149187673892,
+      "n": 1152
+     },
+     "n_skipped_no_gt_or_target": 48
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "all": {
+      "mean_l2_at_2s": 4.773917749056888,
+      "n": 1188
+     },
+     "turn": {
+      "mean_l2_at_2s": 4.3586621529633,
+      "n": 62
+     },
+     "straight": {
+      "mean_l2_at_2s": 4.796782622021188,
+      "n": 1126
+     },
+     "n_skipped_no_gt_or_target": 12
+    }
+   },
+   "pooled": {
+    "all": {
+     "mean_l2_at_2s": 4.267044277670806,
+     "n": 4693
+    },
+    "turn": {
+     "mean_l2_at_2s": 3.5150540744856236,
+     "n": 252
+    },
+    "straight": {
+     "mean_l2_at_2s": 4.3097151921501275,
+     "n": 4441
+    }
+   },
+   "ckpt": null,
+   "ckpt_sha256": "e6573ff1f8ea910b9a53eddfb68f69cac469bf5bfa253a516578f6126110b4fe"
+  },
+  "zeroshot_crop": {
+   "per_city": {
+    "sg-one-north": {
+     "all": {
+      "mean_l2_at_2s": 3.30389509699092,
+      "n": 1189
+     },
+     "turn": {
+      "mean_l2_at_2s": 3.51816624071863,
+      "n": 144
+     },
+     "straight": {
+      "mean_l2_at_2s": 3.274368738429398,
+      "n": 1045
+     },
+     "n_skipped_no_gt_or_target": 11
+    },
+    "us-ma-boston": {
+     "all": {
+      "mean_l2_at_2s": 4.3863802551711135,
+      "n": 1164
+     },
+     "turn": {
+      "mean_l2_at_2s": 2.1944422634399454,
+      "n": 46
+     },
+     "straight": {
+      "mean_l2_at_2s": 4.476567328176153,
+      "n": 1118
+     },
+     "n_skipped_no_gt_or_target": 36
+    },
+    "us-nv-las-vegas-strip": {
+     "all": {
+      "mean_l2_at_2s": 5.682429917868124,
+      "n": 1152
+     },
+     "turn": {
+      "mean_l2_at_2s": null,
+      "n": 0
+     },
+     "straight": {
+      "mean_l2_at_2s": 5.682429917868124,
+      "n": 1152
+     },
+     "n_skipped_no_gt_or_target": 48
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "all": {
+      "mean_l2_at_2s": 5.440656694317054,
+      "n": 1188
+     },
+     "turn": {
+      "mean_l2_at_2s": 3.6402661259616576,
+      "n": 62
+     },
+     "straight": {
+      "mean_l2_at_2s": 5.53979010038991,
+      "n": 1126
+     },
+     "n_skipped_no_gt_or_target": 12
+    }
+   },
+   "pooled": {
+    "all": {
+     "mean_l2_at_2s": 4.6971526327666995,
+     "n": 4693
+    },
+    "turn": {
+     "mean_l2_at_2s": 3.3065745340926305,
+     "n": 252
+    },
+    "straight": {
+     "mean_l2_at_2s": 4.776059563833095,
+     "n": 4441
+    }
+   },
+   "ckpt": null,
+   "ckpt_sha256": "e6573ff1f8ea910b9a53eddfb68f69cac469bf5bfa253a516578f6126110b4fe"
+  },
+  "ft_native": {
+   "per_city": {
+    "sg-one-north": {
+     "all": {
+      "mean_l2_at_2s": 0.6025747512232221,
+      "n": 1189
+     },
+     "turn": {
+      "mean_l2_at_2s": 0.7468787523814373,
+      "n": 144
+     },
+     "straight": {
+      "mean_l2_at_2s": 0.5826897979535732,
+      "n": 1045
+     },
+     "n_skipped_no_gt_or_target": 11
+    },
+    "us-ma-boston": {
+     "all": {
+      "mean_l2_at_2s": 0.5599522144642508,
+      "n": 1164
+     },
+     "turn": {
+      "mean_l2_at_2s": 0.9208905489548392,
+      "n": 46
+     },
+     "straight": {
+      "mean_l2_at_2s": 0.5451014422043519,
+      "n": 1118
+     },
+     "n_skipped_no_gt_or_target": 36
+    },
+    "us-nv-las-vegas-strip": {
+     "all": {
+      "mean_l2_at_2s": 0.41069041367296044,
+      "n": 1152
+     },
+     "turn": {
+      "mean_l2_at_2s": null,
+      "n": 0
+     },
+     "straight": {
+      "mean_l2_at_2s": 0.41069041367296044,
+      "n": 1152
+     },
+     "n_skipped_no_gt_or_target": 48
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "all": {
+      "mean_l2_at_2s": 0.8665727990703354,
+      "n": 1188
+     },
+     "turn": {
+      "mean_l2_at_2s": 1.0490909198359135,
+      "n": 62
+     },
+     "straight": {
+      "mean_l2_at_2s": 0.8565229558310228,
+      "n": 1126
+     },
+     "n_skipped_no_gt_or_target": 12
+    }
+   },
+   "pooled": {
+    "all": {
+     "mean_l2_at_2s": 0.6117301510095052,
+     "n": 4693
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.8529965977169691,
+     "n": 252
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.5980397334075505,
+     "n": 4441
+    }
+   },
+   "ckpt": "/work/navsim_exp/triage_ft/er1_armA/model_ft.pth",
+   "ckpt_sha256": "aa66a752d863528e82b1c6435aa05ce43215505b0346cc7fe110a111d13b7425"
+  },
+  "ft_crop": {
+   "per_city": {
+    "sg-one-north": {
+     "all": {
+      "mean_l2_at_2s": 0.6377638240353732,
+      "n": 1189
+     },
+     "turn": {
+      "mean_l2_at_2s": 0.7705769185752919,
+      "n": 144
+     },
+     "straight": {
+      "mean_l2_at_2s": 0.6194623067016428,
+      "n": 1045
+     },
+     "n_skipped_no_gt_or_target": 11
+    },
+    "us-ma-boston": {
+     "all": {
+      "mean_l2_at_2s": 0.5923858663061021,
+      "n": 1164
+     },
+     "turn": {
+      "mean_l2_at_2s": 0.9289932227693498,
+      "n": 46
+     },
+     "straight": {
+      "mean_l2_at_2s": 0.5785361897432135,
+      "n": 1118
+     },
+     "n_skipped_no_gt_or_target": 36
+    },
+    "us-nv-las-vegas-strip": {
+     "all": {
+      "mean_l2_at_2s": 0.44699737585890237,
+      "n": 1152
+     },
+     "turn": {
+      "mean_l2_at_2s": null,
+      "n": 0
+     },
+     "straight": {
+      "mean_l2_at_2s": 0.44699737585890237,
+      "n": 1152
+     },
+     "n_skipped_no_gt_or_target": 48
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "all": {
+      "mean_l2_at_2s": 0.8490396768037153,
+      "n": 1188
+     },
+     "turn": {
+      "mean_l2_at_2s": 1.128486946705849,
+      "n": 62
+     },
+     "straight": {
+      "mean_l2_at_2s": 0.8336527045710934,
+      "n": 1126
+     },
+     "n_skipped_no_gt_or_target": 12
+    }
+   },
+   "pooled": {
+    "all": {
+     "mean_l2_at_2s": 0.6331639565716238,
+     "n": 4693
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.8875514095952173,
+     "n": 252
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.6187290008945364,
+     "n": 4441
+    }
+   },
+   "ckpt": "/work/navsim_exp/triage_ft/er1_armB/model_ft.pth",
+   "ckpt_sha256": "35ca95ae2d3ebe2b41d0559b34c294528779234c50064619a55412c57f3b2353"
+  }
+ },
+ "verdict": {
+  "rho_armA_turn": 0.757330447941461,
+  "rho_armB_turn": 0.7315797964195072,
+  "repairA_turn_m": 2.6620574767686547,
+  "residual_turn_m": 0.03455481187824816,
+  "residual_all_m": 0.021433805562118602,
+  "E_TR1_1_pass": false,
+  "E_TR1_1_rule": "residual_turn > 0 AND residual_turn >= 0.25 * repairA_turn (pooled 4-city turn stratum)",
+  "E_TR1_2_pass": true,
+  "E_TR1_2_rule": "all-frame residual < turn-frame residual (state-conditional information gap)"
+ },
+ "l2_definition": "L2 between plan point at 2 s (4th wp @2Hz) and human position at 2 s, frozen ego frame; turning = |d yaw over 2 s| >= 15 deg"
+}

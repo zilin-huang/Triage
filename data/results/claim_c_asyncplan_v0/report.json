@@ -1,0 +1,94 @@
+{
+  "exp_id": "claim_c_asyncplan_v0",
+  "decision_packet": "docs/CLAIM_C_ASYNCPLAN_DECISION_PACKET_2026-08-14.md",
+  "grid_coverage": "4/8 cells complete",
+  "cells": {
+    "simlingo_front_asyncplan|seed0|d0": {
+      "n_routes": 5,
+      "completion_mean": 0.074,
+      "collision_route_rate": 1.0,
+      "sidecar": {
+        "deadline_mode": "asyncplan",
+        "asyncplan_plan_age_ticks_p50": 12,
+        "asyncplan_no_plan_ticks": 14
+      }
+    },
+    "simlingo_front_asyncplan|seed1|d0": {
+      "n_routes": 5,
+      "completion_mean": 0.063,
+      "collision_route_rate": 1.0,
+      "sidecar": {
+        "deadline_mode": "asyncplan",
+        "asyncplan_plan_age_ticks_p50": 12,
+        "asyncplan_no_plan_ticks": 14
+      }
+    },
+    "simlingo_front_asyncplan|seed0|d500": {
+      "n_routes": 3,
+      "completion_mean": 0.085,
+      "collision_route_rate": 1.0,
+      "sidecar": {
+        "deadline_mode": "asyncplan",
+        "asyncplan_plan_age_ticks_p50": 12,
+        "asyncplan_no_plan_ticks": 14
+      }
+    },
+    "simlingo_front_asyncplan|seed1|d500": null,
+    "simlingo_front_asyncplan|seed0|d200": {
+      "n_routes": 3,
+      "completion_mean": 0.043,
+      "collision_route_rate": 0.67,
+      "sidecar": {
+        "deadline_mode": "asyncplan",
+        "asyncplan_plan_age_ticks_p50": 12,
+        "asyncplan_no_plan_ticks": 14
+      }
+    },
+    "simlingo_front_asyncplan|seed1|d200": {
+      "n_routes": 1,
+      "completion_mean": 0.038,
+      "collision_route_rate": 0.0,
+      "sidecar": {
+        "deadline_mode": "asyncplan",
+        "asyncplan_plan_age_ticks_p50": 12,
+        "asyncplan_no_plan_ticks": 14
+      }
+    },
+    "simlingo_front|seed0|d200": {
+      "n_routes": 5,
+      "completion_mean": 0.0,
+      "collision_route_rate": 0.0,
+      "sidecar": {}
+    },
+    "simlingo_front|seed1|d200": {
+      "n_routes": 5,
+      "completion_mean": 0.0,
+      "collision_route_rate": 0.0,
+      "sidecar": {}
+    }
+  },
+  "m4_baselines_quoted": {
+    "simlingo_front@d0": {
+      "comp": 1.0,
+      "crr": 0.0
+    },
+    "simlingo_front@d500": {
+      "comp": 0.47833333333333333,
+      "crr": 0.8000000000000002
+    }
+  },
+  "verdicts": {
+    "E3_no_regression_at_d0": {
+      "criterion": "comp>=0.9 and crr<=0.2 (baseline 1.000/0.00)",
+      "observed": {
+        "n_seeds": 2,
+        "comp": 0.0685,
+        "crr": 1.0
+      },
+      "pass": false,
+      "stop_loss_tripped": true
+    }
+  },
+  "isolation": "rows NOT ingested into m4_matrix_v4 / G2",
+  "repo_commit": "4562e47f7767974050c30b1c0b83bb55c1720113"
+}

@@ -1,0 +1,64 @@
+{
+  "packet": "docs/TRIAGE_DTR7_ENGAGEMENT_ANCHOR_2026-08-23.md sec.11",
+  "stage": "E-N4 state-advance curve",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "config_id": "uniad_b2d_born",
+  "city": "us-pa-pittsburgh-hazelwood",
+  "checkpoint": "/work/checkpoints/uniad_b2d_base/uniad_base_b2d.pth",
+  "repeats": 6,
+  "n_baseline_plans": 1200,
+  "n_baseline_failures": 0,
+  "n_stride_frames": 120,
+  "n_repeat_failures": 0,
+  "probe_position_map": {
+    "gamma": [
+      1,
+      2
+    ],
+    "jpeg": [
+      3,
+      4
+    ],
+    "gray": [
+      5
+    ],
+    "noise": [
+      6
+    ]
+  },
+  "drift_k": {
+    "2": {
+      "mean": 5.037319410405519,
+      "median": 5.403800037803064,
+      "p95": 12.990309221385093,
+      "n": 120
+    },
+    "3": {
+      "mean": 5.082735414441669,
+      "median": 5.408210722768194,
+      "p95": 13.48410658622359,
+      "n": 120
+    },
+    "4": {
+      "mean": 5.041211457390339,
+      "median": 5.579454218373385,
+      "p95": 13.129968751406267,
+      "n": 120
+    },
+    "5": {
+      "mean": 5.027114096641745,
+      "median": 5.8296301305669775,
+      "p95": 12.80344789323712,
+      "n": 120
+    },
+    "6": {
+      "mean": 5.0210978246146984,
+      "median": 5.840849613223325,
+      "p95": 12.728311778747361,
+      "n": 120
+    }
+  },
+  "monotone_in_k": false,
+  "repo_commit": "346d108e75af702ec6315bfcd8806fc482f2230f"
+}

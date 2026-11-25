@@ -1,0 +1,103 @@
+{
+ "exp_id": "triage_er6_origin_twin_v0",
+ "decision_packet": "docs/TRIAGE_DTR6_VLA_REPAIR_2026-08-23.md",
+ "pair": "UniAD-Base nuScenes-born (uniad_base_e2e.pth) vs B2D-born (uniad_base_b2d.pth); second architecture for RQ5 (VLA twin search NEGATIVE, packet s4)",
+ "readouts": {
+  "gamma_response_auc": {
+   "per_city": {
+    "sg-one-north": {
+     "carla_born": 3.4029866345731588,
+     "nusc_born": 2.979831771396648
+    },
+    "us-ma-boston": {
+     "carla_born": 2.323673898806935,
+     "nusc_born": 2.7920972418550503
+    },
+    "us-nv-las-vegas-strip": {
+     "carla_born": 3.3679581895655932,
+     "nusc_born": 4.433561239336667
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "carla_born": 2.7064001177600057,
+     "nusc_born": 3.2279766599787516
+    }
+   },
+   "ratio_carla_over_nusc": {
+    "sg-one-north": 1.1420062928512833,
+    "us-ma-boston": 0.8322324394629973,
+    "us-nv-las-vegas-strip": 0.7596507655478996,
+    "us-pa-pittsburgh-hazelwood": 0.838419977230511
+   },
+   "ratio_4city_mean": 0.8930773687731728,
+   "n_cities_ratio_gt_1": 1
+  },
+  "jpeg_response_auc": {
+   "per_city": {
+    "sg-one-north": {
+     "carla_born": 1.0638743385108298,
+     "nusc_born": 2.1315031569217044
+    },
+    "us-ma-boston": {
+     "carla_born": 0.6383258849929001,
+     "nusc_born": 2.384406245272809
+    },
+    "us-nv-las-vegas-strip": {
+     "carla_born": 1.518795001990998,
+     "nusc_born": 3.64374070329651
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "carla_born": 0.8362685556899567,
+     "nusc_born": 2.425349344361248
+    }
+   },
+   "ratio_carla_over_nusc": {
+    "sg-one-north": 0.4991192882150203,
+    "us-ma-boston": 0.2677085275457609,
+    "us-nv-las-vegas-strip": 0.4168230194362998,
+    "us-pa-pittsburgh-hazelwood": 0.34480334044834293
+   },
+   "ratio_4city_mean": 0.382113543911356,
+   "n_cities_ratio_gt_1": 0
+  },
+  "traj_diff_norm_mean": {
+   "per_city": {
+    "sg-one-north": {
+     "carla_born": 2.5119226259863674,
+     "nusc_born": 2.0521650797672235
+    },
+    "us-ma-boston": {
+     "carla_born": 1.4278018483736128,
+     "nusc_born": 1.9530598067251301
+    },
+    "us-nv-las-vegas-strip": {
+     "carla_born": 1.8958047485212015,
+     "nusc_born": 1.6201434830696502
+    },
+    "us-pa-pittsburgh-hazelwood": {
+     "carla_born": 2.1567363007130074,
+     "nusc_born": 1.5501961363475507
+    }
+   },
+   "ratio_carla_over_nusc": {
+    "sg-one-north": 1.224035361848811,
+    "us-ma-boston": 0.7310589483522963,
+    "us-nv-las-vegas-strip": 1.170146205155399,
+    "us-pa-pittsburgh-hazelwood": 1.3912667243478871
+   },
+   "ratio_4city_mean": 1.1291268099260985,
+   "n_cities_ratio_gt_1": 3
+  }
+ },
+ "verdict": {
+  "E_R6_1": {
+   "rule": "expected direction: CARLA-born more sensitive/unstable on real frames \u2014 ratio > 1 in >= 3/4 cities, per readout (gamma/jpeg AUC + traj_diff); opposite direction reported honestly (packet s4)",
+   "per_readout_direction_pass": {
+    "gamma_response_auc": false,
+    "jpeg_response_auc": false,
+    "traj_diff_norm_mean": true
+   },
+   "complete": true
+  }
+ },
+ "repo_commit": "8e95f12e33b9da66fdcae698c99c6e0204564ad4"
+}

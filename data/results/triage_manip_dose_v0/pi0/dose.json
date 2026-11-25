@@ -1,0 +1,86 @@
+{
+  "exp_id": "triage_manip_dose_v0",
+  "decision_packet": "docs/TRIAGE_DTR2_MANIPULATION_PORTABILITY_2026-08-21.md",
+  "agent": "pi0",
+  "frames": "bridge_subset, deterministic even-stride selection",
+  "n_frames": 120,
+  "keep_ratios": {
+    "fov_crop": [
+      0.9,
+      0.75,
+      0.6
+    ],
+    "resolution": [
+      0.75,
+      0.5,
+      0.33
+    ]
+  },
+  "equal_pixel_budget_pair": {
+    "fov_crop": 0.75,
+    "resolution": 0.75
+  },
+  "paired_determinism_max_abs_diff": 0.0,
+  "readout": "L2 of (perturbed - clean) action vector, pose dims only (gripper dim 6 excluded); chunk models: first step primary",
+  "mean_action_displacement": {
+    "fov_crop": {
+      "0.9": 0.6609687320550567,
+      "0.75": 1.348772638629269,
+      "0.6": 1.9905168744619581
+    },
+    "resolution": {
+      "0.75": 0.5737993932907858,
+      "0.5": 0.7050289669755938,
+      "0.33": 0.9377423390902474
+    }
+  },
+  "n_per_dose": {
+    "fov_crop": {
+      "0.9": 120,
+      "0.75": 120,
+      "0.6": 120
+    },
+    "resolution": {
+      "0.75": 120,
+      "0.5": 120,
+      "0.33": 120
+    }
+  },
+  "secondary_chunk_mean_displacement": {
+    "fov_crop": {
+      "0.9": 0.6071081654570615,
+      "0.75": 1.2264036907570517,
+      "0.6": 1.6774923022150106
+    },
+    "resolution": {
+      "0.75": 0.4746349968987572,
+      "0.5": 0.5852822987131063,
+      "0.33": 0.8111117001418646
+    }
+  },
+  "perturb_impl": "fov: scripts/72 fov_apply verbatim; res: scripts/73 fov_apply verbatim; on model input image before the official preprocessing path",
+  "model_meta": {
+    "model_id": "lerobot/pi0_base",
+    "revision": "25c379b52ba2ff8788cab921758a3cc3fe3f77f2",
+    "local_dir": "/work/checkpoints/manip/pi0_base",
+    "route": "lerobot==0.4.4 official processor pipeline + predict_action_chunk",
+    "chunk": 50,
+    "gripper_dim": 6,
+    "pose_dims": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "img_key": "observation.images.base_0_rgb",
+    "missing_cameras": "official zero-pad + mask mechanism",
+    "state_mode": "bridge_state_raw_padded",
+    "robot_type": null,
+    "action_note": "32-d padded normalized action space (no unnorm stats in base checkpoint); dims 0-5 treated as pose per openpi single-arm convention, dim 6 gripper, 7-31 padding",
+    "sampler_seed": 0,
+    "tokenizer_note": "tokenizer from pinned mirror copy at /work/checkpoints/manip/paligemma_tokenizer, bit-identical to official paligemma tokenizer"
+  },
+  "repo_commit": "4ae022586a6541a91cf8f4789f3a714cb226032e"
+}

@@ -1,0 +1,191 @@
+{
+  "exp_id": "lineb_minig2_exam_v1",
+  "roster": "v6",
+  "strata_exp": "lineb_city_strata_v6",
+  "opponent": "driveva",
+  "decision_packet": "docs/LINEB_DB3_MINIG2_PACKET_2026-08-17.md",
+  "namespace": "open_loop cross-source; never enters m4/G2",
+  "candidates": [
+    "autovla",
+    "curious",
+    "cv",
+    "diffusiondrive",
+    "driveva",
+    "ego_mlp",
+    "ltf",
+    "recogdrive",
+    "transfuser"
+  ],
+  "n_rows": 36,
+  "row_problems": [],
+  "feature_order": [
+    "z_appr_ref",
+    "z_geom_ref",
+    "z_behav_ref",
+    "traj_diff_norm_mean",
+    "traj_diff_norm_p95",
+    "plan_jitter_lowband_power",
+    "kinematic_violation_rate",
+    "invalid_output_rate",
+    "gamma_response_auc",
+    "jpeg_response_auc"
+  ],
+  "folds": [
+    {
+      "held_city": "sg-one-north",
+      "family": "stage1_tuned",
+      "family_scores": {
+        "stage1_tuned": 0.018989,
+        "mixed_effects": 0.045402,
+        "delta_gp": 0.049148,
+        "monotone_gbt": 0.05923
+      },
+      "selected": "driveva",
+      "selected_pdms": 0.8760039421342485,
+      "king": "driveva",
+      "king_pdms": 0.8760039421342485,
+      "regret": 0.0,
+      "naive_regret": 0.0,
+      "safety_violation": false,
+      "predictions": {
+        "cv": 0.2214246828384676,
+        "ego_mlp": 0.6398293803331673,
+        "transfuser": 0.8836497837107122,
+        "ltf": 0.8808516167234895,
+        "diffusiondrive": 0.8969643484400908,
+        "recogdrive": 0.9006763931530987,
+        "curious": 0.8837942491804824,
+        "autovla": 0.8706074771143651,
+        "driveva": 0.9138475631702297
+      }
+    },
+    {
+      "held_city": "us-ma-boston",
+      "family": "stage1_tuned",
+      "family_scores": {
+        "stage1_tuned": 0.018114,
+        "mixed_effects": 0.044331,
+        "delta_gp": 0.03283,
+        "monotone_gbt": 0.059704
+      },
+      "selected": "autovla",
+      "selected_pdms": 0.9007805070833932,
+      "king": "driveva",
+      "king_pdms": 0.9110219317655528,
+      "regret": 0.010241424682159606,
+      "naive_regret": 0.0,
+      "safety_violation": false,
+      "predictions": {
+        "cv": 0.21793723730524187,
+        "ego_mlp": 0.7293845592559037,
+        "transfuser": 0.8605892103926984,
+        "ltf": 0.8440731026886531,
+        "diffusiondrive": 0.8632645750368064,
+        "recogdrive": 0.8901685810631802,
+        "curious": 0.8958179078175984,
+        "autovla": 0.9009108339400509,
+        "driveva": 0.868403785912815
+      }
+    },
+    {
+      "held_city": "us-nv-las-vegas-strip",
+      "family": "stage1_tuned",
+      "family_scores": {
+        "stage1_tuned": 0.01929,
+        "mixed_effects": 0.037962,
+        "delta_gp": 0.051617,
+        "monotone_gbt": 0.057267
+      },
+      "selected": "recogdrive",
+      "selected_pdms": 0.9468426306082132,
+      "king": "recogdrive",
+      "king_pdms": 0.9468426306082132,
+      "regret": 0.0,
+      "naive_regret": 0.007064690064944812,
+      "safety_violation": false,
+      "predictions": {
+        "cv": 0.18812998302623737,
+        "ego_mlp": 0.6325476777107649,
+        "transfuser": 0.814398957642983,
+        "ltf": 0.8120410759673218,
+        "diffusiondrive": 0.8759605323144796,
+        "recogdrive": 0.8930455654914853,
+        "curious": 0.8643055118122612,
+        "autovla": 0.8880698785665483,
+        "driveva": 0.8451262875661874
+      }
+    },
+    {
+      "held_city": "us-pa-pittsburgh-hazelwood",
+      "family": "stage1_tuned",
+      "family_scores": {
+        "stage1_tuned": 0.031768,
+        "mixed_effects": 0.048073,
+        "delta_gp": 0.039776,
+        "monotone_gbt": 0.061331
+      },
+      "selected": "autovla",
+      "selected_pdms": 0.887170645583078,
+      "king": "driveva",
+      "king_pdms": 0.8962985962536089,
+      "regret": 0.009127950670530849,
+      "naive_regret": 0.0,
+      "safety_violation": false,
+      "predictions": {
+        "cv": 0.3385318458517779,
+        "ego_mlp": 0.6410878704711886,
+        "transfuser": 0.8536739444492308,
+        "ltf": 0.800327488131005,
+        "diffusiondrive": 0.8349604255834696,
+        "recogdrive": 0.8882160625083562,
+        "curious": 0.8745938664783338,
+        "autovla": 0.8916144837814659,
+        "driveva": 0.8867368293672165
+      }
+    }
+  ],
+  "mean_regret_predictor": 0.004842343838172614,
+  "mean_regret_naive_champion": 0.001766172516236203,
+  "safety_violation_any": false,
+  "E_B3_1_pass": false,
+  "degenerated_to_global_no1": false,
+  "probe_discrimination_kings": {
+    "recogdrive": {
+      "traj_diff_norm_mean": 0.255,
+      "traj_diff_norm_p95": 0.184,
+      "plan_jitter_lowband_power": 0.327,
+      "kinematic_violation_rate": 1.49,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.131,
+      "jpeg_response_auc": 0.121
+    },
+    "curious": {
+      "traj_diff_norm_mean": 0.408,
+      "traj_diff_norm_p95": 0.438,
+      "plan_jitter_lowband_power": 0.341,
+      "kinematic_violation_rate": 0.0,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.266,
+      "jpeg_response_auc": 0.622
+    },
+    "autovla": {
+      "traj_diff_norm_mean": 0.498,
+      "traj_diff_norm_p95": 0.842,
+      "plan_jitter_lowband_power": 0.441,
+      "kinematic_violation_rate": 1.421,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.218,
+      "jpeg_response_auc": 0.248
+    },
+    "driveva": {
+      "traj_diff_norm_mean": 0.329,
+      "traj_diff_norm_p95": 0.288,
+      "plan_jitter_lowband_power": 0.387,
+      "kinematic_violation_rate": 1.208,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.294,
+      "jpeg_response_auc": 0.117
+    }
+  },
+  "repo_commit": "78ada1bb07e46136719c6cbdb657d4ef66014e48"
+}

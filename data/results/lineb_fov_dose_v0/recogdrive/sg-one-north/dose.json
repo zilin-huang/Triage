@@ -1,0 +1,26 @@
+{
+  "exp_id": "lineb_fov_dose_v0",
+  "decision_packet": "docs/LINEB_DXD2_FOV_DOSE_2026-08-19.md",
+  "agent": "recogdrive",
+  "city": "sg-one-north",
+  "n_frames": 119,
+  "keep_ratios": [
+    0.9,
+    0.75,
+    0.6
+  ],
+  "mean_displacement_m": {
+    "0.9": 0.3107569575594827,
+    "0.75": 0.44579973238568393,
+    "0.6": 0.597938607421186
+  },
+  "n_per_dose": {
+    "0.9": 119,
+    "0.75": 119,
+    "0.6": 119
+  },
+  "fov_crop_response_auc": 0.3763999377734422,
+  "adapter_note": "scripts/64 harness; fov_crop+resize on all consumed frames",
+  "namespace": "open_loop cross-source; never enters m4/G2",
+  "repo_commit": "12435a4c10b0c0a6545474ed8fd6f3246e6f284e"
+}

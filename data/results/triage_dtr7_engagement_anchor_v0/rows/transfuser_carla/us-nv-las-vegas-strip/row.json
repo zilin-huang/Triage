@@ -1,0 +1,41 @@
+{
+  "packet": "docs/TRIAGE_DTR7_ENGAGEMENT_ANCHOR_2026-08-23.md",
+  "config_id": "transfuser_carla",
+  "city": "us-nv-las-vegas-strip",
+  "carrier_state": "stateless_per_frame",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "adapter_note": "this side runs its OWN native adapter (scripts/71: CARLA-convention composite of L0/F0/R0 central crops + nuPlan LiDAR). The anchor therefore inherits exactly the same cross-adapter comparability status as the existing gamma/jpeg readouts of this twin, no better and no worse.",
+  "n_baseline_plans": 1151,
+  "n_perturb_frames": 116,
+  "sign_diagnostic": 0.6666666666666666,
+  "n_turning_frames": 6,
+  "dose_displacement_mean": {
+    "gamma": 0.16767392594744612,
+    "jpeg": 0.07947923033498228
+  },
+  "anchor": {
+    "D_gray": 1.9474681744287754,
+    "D_noise": 1.8655928959106576,
+    "n_gray": 116,
+    "n_noise": 116
+  },
+  "engagement_normalized": {
+    "gamma": 0.08609841647174936,
+    "jpeg": 0.04081156826005378
+  },
+  "instrument_checks": {
+    "paired_determinism_max_abs_delta": 0.0,
+    "monotonicity_D_gray_gt_doses": true,
+    "pass_order": [
+      "gamma1.8",
+      "gamma2.6",
+      "jpeg50",
+      "jpeg20",
+      "gray",
+      "noise",
+      "gray_repeat"
+    ]
+  },
+  "repo_commit": "4c22a67d113c6b4dce96a66285b9d0887ddbd86d"
+}

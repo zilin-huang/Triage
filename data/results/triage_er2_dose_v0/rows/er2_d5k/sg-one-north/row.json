@@ -1,0 +1,86 @@
+{
+  "exp_id": "triage_er2_dose_v0",
+  "decision_packet": "docs/TRIAGE_DTR1_REPAIR_OPERATOR_CROSS_2026-08-21.md",
+  "agent": "er2_d5k",
+  "city": "sg-one-north",
+  "budget_minutes": 10,
+  "n_frames_planned": 1184,
+  "plan_horizon_pts": 4,
+  "plan_rate_hz": 2.0,
+  "sign_diagnostic_agreement": 0.9911111111111112,
+  "probe_schema": {
+    "id": "probe_schema_v1",
+    "sha256": "90a3f22fbc08898b8cbfbcab43cef83d3f59fc8a9f3f61066d0ea13c4da447cf"
+  },
+  "row": {
+    "values": {
+      "traj_diff_norm_mean": 1.0486033550368647,
+      "traj_diff_norm_p95": 2.654730073291223,
+      "plan_jitter_lowband_power": 0.9476556556094662,
+      "kinematic_violation_rate": 0.0,
+      "offroad_rate": NaN,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.45706027361198454,
+      "jpeg_response_auc": 0.23021313002123972,
+      "fov_crop_response_auc": NaN,
+      "output_w1_vs_source_reference": NaN,
+      "confidence_mean": NaN,
+      "multimodal_disagreement": NaN,
+      "language_action_consistency": NaN,
+      "bev_occupancy_entropy": NaN,
+      "candidate_trajectory_spread": NaN
+    },
+    "availability_mask": {
+      "traj_diff_norm_mean": 1,
+      "traj_diff_norm_p95": 1,
+      "plan_jitter_lowband_power": 1,
+      "kinematic_violation_rate": 1,
+      "offroad_rate": 0,
+      "invalid_output_rate": 1,
+      "gamma_response_auc": 1,
+      "jpeg_response_auc": 1,
+      "fov_crop_response_auc": 0,
+      "output_w1_vs_source_reference": 0,
+      "confidence_mean": 0,
+      "multimodal_disagreement": 0,
+      "language_action_consistency": 0,
+      "bev_occupancy_entropy": 0,
+      "candidate_trajectory_spread": 0
+    },
+    "families": {
+      "traj_diff_norm_mean": "output_stability",
+      "traj_diff_norm_p95": "output_stability",
+      "plan_jitter_lowband_power": "output_stability",
+      "kinematic_violation_rate": "trajectory_legality",
+      "offroad_rate": "trajectory_legality",
+      "invalid_output_rate": "trajectory_legality",
+      "gamma_response_auc": "perturbation_sensitivity",
+      "jpeg_response_auc": "perturbation_sensitivity",
+      "fov_crop_response_auc": "perturbation_sensitivity",
+      "output_w1_vs_source_reference": "distribution_drift",
+      "confidence_mean": "distribution_drift",
+      "multimodal_disagreement": "distribution_drift",
+      "language_action_consistency": "native_diagnostics",
+      "bev_occupancy_entropy": "native_diagnostics",
+      "candidate_trajectory_spread": "native_diagnostics"
+    }
+  },
+  "l2_vs_human": {
+    "all": {
+      "mean_l2_at_2s": 2.0517660587541506,
+      "n": 1184
+    },
+    "turn": {
+      "mean_l2_at_2s": 1.8551039088827868,
+      "n": 144
+    },
+    "straight": {
+      "mean_l2_at_2s": 2.0789962025824935,
+      "n": 1040
+    },
+    "n_skipped_no_gt": 0
+  },
+  "l2_definition": "L2 between plan point at 2 s and human position at 2 s, frozen ego frame; turning = |d yaw over 2 s| >= 15 deg",
+  "namespace": "triage repair experiments; never navtest PDMS; never enters m4/G2",
+  "repo_commit": "352dc5ae6c9e264a1b738c1365882a5310d757b5"
+}

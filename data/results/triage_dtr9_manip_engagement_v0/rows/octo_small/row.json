@@ -1,0 +1,72 @@
+{
+  "packet": "docs/TRIAGE_DTR9_MANIP_ENGAGEMENT_2026-08-24.md",
+  "model": "octo_small",
+  "model_id": "rail-berkeley/octo-small-1.5",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "n_frames_ok": 120,
+  "n_frames_chosen": 120,
+  "gripper_dim": 6,
+  "chunk": 4,
+  "dose_displacement_mean": {
+    "fov_crop": 0.04836929443993874,
+    "resolution": 0.044069694035915645
+  },
+  "dose_per_keep": {
+    "fov_crop": {
+      "0.9": 0.029048862310420153,
+      "0.75": 0.05311167286113912,
+      "0.6": 0.06294734814825695
+    },
+    "resolution": {
+      "0.75": 0.03258720490651835,
+      "0.5": 0.04324950527067388,
+      "0.33": 0.056372371930554686
+    }
+  },
+  "chunk_secondary": {
+    "dose": {
+      "fov_crop": {
+        "0.9": 0.028616484066038766,
+        "0.75": 0.04932150241768808,
+        "0.6": 0.0630024828519044
+      },
+      "resolution": {
+        "0.75": 0.0261841321822755,
+        "0.5": 0.037089213829369146,
+        "0.33": 0.050773200226243674
+      }
+    },
+    "anchor": {
+      "gray": 0.05492243490037251,
+      "noise": 0.1027973891454589
+    }
+  },
+  "displacement_convention": "first step of the action chunk (primary)",
+  "anchor": {
+    "D_gray": 0.05586630857721974,
+    "D_noise": 0.12354529650749689,
+    "n_gray": 120,
+    "n_noise": 120
+  },
+  "engagement_normalized": {
+    "fov_crop": 0.8658043760503981,
+    "resolution": 0.788842061669449
+  },
+  "repeat_floor": {
+    "per_k": {
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0
+    },
+    "mean": 0.0,
+    "n_per_k": {
+      "2": 120,
+      "3": 120,
+      "4": 120
+    }
+  },
+  "cross_model_attributable": true,
+  "asymmetry_note": "kappa_fov/kappa_res == Dbar_fov/Dbar_res by identity; the within-model asymmetry is invariant under normalisation and is NOT tested here (packet sec.1)",
+  "repo_commit": "45013c990c95c56b36fde2f71fc99d8612747fae"
+}

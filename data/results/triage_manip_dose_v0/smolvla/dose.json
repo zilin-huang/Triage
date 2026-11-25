@@ -1,0 +1,85 @@
+{
+  "exp_id": "triage_manip_dose_v0",
+  "decision_packet": "docs/TRIAGE_DTR2_MANIPULATION_PORTABILITY_2026-08-21.md",
+  "agent": "smolvla",
+  "frames": "bridge_subset, deterministic even-stride selection",
+  "n_frames": 120,
+  "keep_ratios": {
+    "fov_crop": [
+      0.9,
+      0.75,
+      0.6
+    ],
+    "resolution": [
+      0.75,
+      0.5,
+      0.33
+    ]
+  },
+  "equal_pixel_budget_pair": {
+    "fov_crop": 0.75,
+    "resolution": 0.75
+  },
+  "paired_determinism_max_abs_diff": 0.0,
+  "readout": "L2 of (perturbed - clean) action vector, pose dims only (gripper dim 5 excluded); chunk models: first step primary",
+  "mean_action_displacement": {
+    "fov_crop": {
+      "0.9": 0.13910046942186696,
+      "0.75": 0.2597443668522672,
+      "0.6": 0.35669716916350747
+    },
+    "resolution": {
+      "0.75": 0.12728122965603347,
+      "0.5": 0.22953648614244176,
+      "0.33": 0.2678448787082927
+    }
+  },
+  "n_per_dose": {
+    "fov_crop": {
+      "0.9": 120,
+      "0.75": 120,
+      "0.6": 120
+    },
+    "resolution": {
+      "0.75": 120,
+      "0.5": 120,
+      "0.33": 120
+    }
+  },
+  "secondary_chunk_mean_displacement": {
+    "fov_crop": {
+      "0.9": 0.33451956535351357,
+      "0.75": 0.5493220532604648,
+      "0.6": 0.7116302060998817
+    },
+    "resolution": {
+      "0.75": 0.2460976726493375,
+      "0.5": 0.3824949778204593,
+      "0.33": 0.43548454360345507
+    }
+  },
+  "perturb_impl": "fov: scripts/72 fov_apply verbatim; res: scripts/73 fov_apply verbatim; on model input image before the official preprocessing path",
+  "model_meta": {
+    "model_id": "lerobot/smolvla_base",
+    "revision": "c83c3163b8ca9b7e67c509fffd9121e66cb96205",
+    "local_dir": "/work/checkpoints/manip/smolvla_base",
+    "route": "lerobot==0.4.4 official processor pipeline + predict_action_chunk",
+    "chunk": 50,
+    "gripper_dim": 5,
+    "pose_dims": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "img_key": "observation.images.camera1",
+    "missing_cameras": "official zero-pad + mask mechanism",
+    "state_mode": "constant_zero_6d",
+    "robot_type": "so100",
+    "action_note": "6-d SO-10x joint-space action; the shipped unnormalizer stats are keyed per-robot ('so100.buffer.action') and never match the 'action' feature, so outputs remain in the model's NORMALIZED action units (verified vs so100 stats scale); dim 5 gripper",
+    "sampler_seed": 0,
+    "tokenizer_note": null
+  },
+  "repo_commit": "358481bf020f982b86c352aaa5510adcc0c20673"
+}

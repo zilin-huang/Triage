@@ -1,0 +1,23 @@
+configuration,trip,reached_end,takeover_at_m,autonomous_m,autonomous_s,plan_age_p50_s,expired_plan_share,steer_rate_p95_deg_s
+DriveVLA-W0,1,1,,140.7,37.9,1.518,0.0,90.9
+DriveVLA-W0,2,0,133.9,133.2,36.2,1.457,0.0,30.0
+DriveVLA-W0,3,1,,143.1,41.4,1.484,0.0,30.0
+DriveVLA-W0,4,1,,143.1,42.2,1.476,0.0,60.0
+DriveVLA-W0,5,1,,143.1,42.0,1.464,0.0,50.0
+"LTF, side views blacked out",1,0,46.25,46.2,15.3,0.815,0.0,16.7
+"LTF, side views blacked out",2,0,48.0,48.0,16.0,0.817,0.0,36.4
+LTF fine-tuned on local data,1,0,70.84,70.8,21.0,0.826,0.0,20.0
+LTF fine-tuned on local data,2,0,73.16,73.1,22.0,0.829,0.0,25.0
+LTF,1,1,,143.1,42.1,0.803,0.0,22.2
+LTF,2,1,,143.1,43.3,0.8,0.0,22.2
+LTF,3,1,,143.1,42.0,0.814,0.0,25.0
+LTF,4,1,,143.1,46.2,0.804,0.0,25.0
+LTF,5,1,,143.1,43.0,0.806,0.0,30.0
+"LTF, plans held 1.0 s longer",1,1,,143.1,42.1,2.347,0.0,40.0
+"LTF, plans held 1.0 s longer",2,1,,143.1,42.3,2.342,0.0,40.0
+"LTF, plans held 1.0 s longer",3,1,,143.1,43.5,2.341,0.0,54.5
+"LTF, plans held 2.0 s longer",1,0,116.42,116.4,32.6,3.876,0.442,120.0
+"LTF, plans held 2.0 s longer",2,0,59.27,59.2,18.2,3.882,0.443,40.0
+"LTF, plans held 0.5 s longer",1,1,,143.1,41.7,1.586,0.0,30.0
+"LTF, plans held 0.5 s longer",2,1,,143.1,41.9,1.598,0.0,27.3
+"LTF, plans held 0.5 s longer",3,1,,143.1,42.4,1.569,0.0,27.3

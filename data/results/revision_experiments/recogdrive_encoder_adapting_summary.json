@@ -1,0 +1,201 @@
+{
+ "exp_id": "trb_e4_paper_v0",
+ "source_readout": "outputs/trb_e4_recogdrive_fixgrad_v0/readout.json",
+ "source_readout_sha256": "c935a8f6744d2dd828e11acae7b6304b0bb86ceb0dcabab29024759e3166cb77",
+ "frozen_reference_a6000": {
+  "keep_0.6": {
+   "repairA_turn_m": 0.13044050641957827,
+   "residual_turn_m": 0.05634835652378978,
+   "residual_all_m": 0.0034795027399351364,
+   "damage_turn_m": 0.2214216253407949,
+   "compensation": 0.7455155681516528,
+   "rho_armA_turn": 0.21490096734543201,
+   "rho_armB_turn": 0.3567278280749464,
+   "E_R4_1_pass": true,
+   "E_R4_1_status": "interpretable",
+   "E_R4_3_pass": true,
+   "E_R4_3_status": "interpretable",
+   "residual_straight_m": 0.0007931018381234223,
+   "residual_over_repair_turn": 0.43198511007415297,
+   "compensation_raw": 0.7455155681516528,
+   "bootstrap_95": {
+    "residual_turn": {
+     "lo": 0.020091747801847974,
+     "hi": 0.09574111936514403,
+     "n_blocks": 32,
+     "n_frames": 222,
+     "n_boot": 2000,
+     "n_finite": 2000
+    },
+    "residual_straight": {
+     "lo": -0.009019323259085048,
+     "hi": 0.009391278857306638,
+     "n_blocks": 238,
+     "n_frames": 4369,
+     "n_boot": 2000,
+     "n_finite": 2000
+    },
+    "residual_all": {
+     "lo": -0.006400761021165024,
+     "hi": 0.01184503499842286,
+     "n_blocks": 238,
+     "n_frames": 4591,
+     "n_boot": 2000,
+     "n_finite": 2000
+    },
+    "compensation_turn": {
+     "lo": 0.5374135755020505,
+     "hi": 0.902882827844628,
+     "n_blocks": 32,
+     "n_frames": 222,
+     "n_boot": 2000,
+     "n_finite": 2000
+    }
+   }
+  },
+  "keep_0.3": {
+   "repairA_turn_m": 0.13044050641957827,
+   "residual_turn_m": 0.1327461994889223,
+   "residual_all_m": 0.025936312342076384,
+   "damage_turn_m": 0.37080163721994375,
+   "compensation": 0.6420021214464517,
+   "rho_armA_turn": 0.21490096734543201,
+   "rho_armB_turn": 0.3768695128066943,
+   "E_R4_1_pass": true,
+   "E_R4_1_status": "interpretable",
+   "E_R4_3_pass": true,
+   "E_R4_3_status": "interpretable",
+   "residual_straight_m": 0.020509030367574288,
+   "residual_over_repair_turn": 1.0176762045213736,
+   "compensation_raw": 0.6420021214464517,
+   "bootstrap_95": {
+    "residual_turn": {
+     "lo": 0.07327632572905199,
+     "hi": 0.2018308415128358,
+     "n_blocks": 32,
+     "n_frames": 222,
+     "n_boot": 2000,
+     "n_finite": 2000
+    },
+    "residual_straight": {
+     "lo": 0.011301019392214954,
+     "hi": 0.029521238457946474,
+     "n_blocks": 238,
+     "n_frames": 4369,
+     "n_boot": 2000,
+     "n_finite": 2000
+    },
+    "residual_all": {
+     "lo": 0.015826948860966257,
+     "hi": 0.03528538955728901,
+     "n_blocks": 238,
+     "n_frames": 4591,
+     "n_boot": 2000,
+     "n_finite": 2000
+    },
+    "compensation_turn": {
+     "lo": 0.5007036955879751,
+     "hi": 0.7679071527903786,
+     "n_blocks": 32,
+     "n_frames": 222,
+     "n_boot": 2000,
+     "n_finite": 2000
+    }
+   }
+  }
+ },
+ "e4_city_residuals": {
+  "keep_0.75_s1": {
+   "sg-one-north": {
+    "n_turn": 144,
+    "residual_turn_m": 0.056372165553386644
+   },
+   "us-ma-boston": {
+    "n_turn": 19,
+    "residual_turn_m": -0.00014428230497720573
+   },
+   "us-nv-las-vegas-strip": {
+    "n_turn": 0,
+    "residual_turn_m": null
+   },
+   "us-pa-pittsburgh-hazelwood": {
+    "n_turn": 59,
+    "residual_turn_m": 0.016969286493982938
+   }
+  },
+  "keep_0.6_s1": {
+   "sg-one-north": {
+    "n_turn": 144,
+    "residual_turn_m": 0.02264344426124898
+   },
+   "us-ma-boston": {
+    "n_turn": 19,
+    "residual_turn_m": 0.05655170655896513
+   },
+   "us-nv-las-vegas-strip": {
+    "n_turn": 0,
+    "residual_turn_m": null
+   },
+   "us-pa-pittsburgh-hazelwood": {
+    "n_turn": 59,
+    "residual_turn_m": 0.008626121495685313
+   }
+  },
+  "keep_0.6_s2": {
+   "sg-one-north": {
+    "n_turn": 144,
+    "residual_turn_m": 0.033508072726044946
+   },
+   "us-ma-boston": {
+    "n_turn": 19,
+    "residual_turn_m": 0.01313883512893399
+   },
+   "us-nv-las-vegas-strip": {
+    "n_turn": 0,
+    "residual_turn_m": null
+   },
+   "us-pa-pittsburgh-hazelwood": {
+    "n_turn": 59,
+    "residual_turn_m": 0.010893042822761934
+   }
+  },
+  "keep_0.45_s1": {
+   "sg-one-north": {
+    "n_turn": 144,
+    "residual_turn_m": 0.06873523847525953
+   },
+   "us-ma-boston": {
+    "n_turn": 19,
+    "residual_turn_m": 0.011196043960951862
+   },
+   "us-nv-las-vegas-strip": {
+    "n_turn": 0,
+    "residual_turn_m": null
+   },
+   "us-pa-pittsburgh-hazelwood": {
+    "n_turn": 59,
+    "residual_turn_m": 0.036852086304397624
+   }
+  },
+  "keep_0.3_s1": {
+   "sg-one-north": {
+    "n_turn": 144,
+    "residual_turn_m": 0.07955657715697051
+   },
+   "us-ma-boston": {
+    "n_turn": 19,
+    "residual_turn_m": 0.11285096565168518
+   },
+   "us-nv-las-vegas-strip": {
+    "n_turn": 0,
+    "residual_turn_m": null
+   },
+   "us-pa-pittsburgh-hazelwood": {
+    "n_turn": 59,
+    "residual_turn_m": 0.10763276501374319
+   }
+  }
+ },
+ "e4_k060_positive_every_city_with_turns_both_seeds": true,
+ "note": "frozen rows: ER4/ER5 on the A6000; E4 rows: Pro 6000; never combined"
+}

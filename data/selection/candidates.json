@@ -1,0 +1,173 @@
+{
+ "cities": [
+  "SIN",
+  "BOS",
+  "LVG",
+  "PIT"
+ ],
+ "pdms_per_city": {
+  "cv": {
+   "SIN": 17.55280867673274,
+   "BOS": 20.637243559702735,
+   "LVG": 21.13741979578992,
+   "PIT": 22.2974370165363
+  },
+  "ego_mlp": {
+   "SIN": 52.877114246119696,
+   "BOS": 63.81487537229559,
+   "LVG": 78.85720859592128,
+   "PIT": 55.801175392236566
+  },
+  "transfuser": {
+   "SIN": 76.76093437344694,
+   "BOS": 80.81017441874188,
+   "LVG": 90.99753064453516,
+   "PIT": 79.85934521352488
+  },
+  "ltf": {
+   "SIN": 74.7934626319841,
+   "BOS": 82.58074711339174,
+   "LVG": 91.15831084081674,
+   "PIT": 82.14244552632948
+  },
+  "diffusiondrive": {
+   "SIN": 81.97809009847366,
+   "BOS": 86.96016859928942,
+   "LVG": 92.95284906267842,
+   "PIT": 86.62892310058788
+  },
+  "recogdrive": {
+   "SIN": 85.6950506480556,
+   "BOS": 89.2642109709097,
+   "LVG": 94.68426306082114,
+   "PIT": 88.79349073094632
+  },
+  "curious": {
+   "SIN": 85.92901842241909,
+   "BOS": 88.54072415432049,
+   "LVG": 93.60060635288409,
+   "PIT": 88.20725868429741
+  },
+  "autovla": {
+   "SIN": 82.50615745750233,
+   "BOS": 90.07805070833919,
+   "LVG": 92.39353256714593,
+   "PIT": 88.71706455830798
+  },
+  "driveva": {
+   "SIN": 87.60039421342476,
+   "BOS": 91.10219317655535,
+   "LVG": 93.9777940543269,
+   "PIT": 89.62985962536114
+  }
+ },
+ "pdms_global": {
+  "cv": 20.651651538605847,
+  "ego_mlp": 65.51648747289745,
+  "transfuser": 83.38995372730564,
+  "ltf": 84.1356800561853,
+  "diffusiondrive": 88.11374260491398,
+  "recogdrive": 90.42063031045993,
+  "curious": 89.75527224699765,
+  "autovla": 89.3851516527478,
+  "driveva": 91.21709579816407
+ },
+ "contracts": {
+  "cv": {
+   "cameras": "none",
+   "lidar": false,
+   "latency_ms": 0.010876003216253594,
+   "blind": true
+  },
+  "ego_mlp": {
+   "cameras": "none",
+   "lidar": false,
+   "latency_ms": 0.1178739985334687,
+   "blind": true
+  },
+  "transfuser": {
+   "cameras": "tri",
+   "lidar": true,
+   "latency_ms": 68.5466280010587,
+   "blind": false
+  },
+  "ltf": {
+   "cameras": "tri",
+   "lidar": false,
+   "latency_ms": 69.22103850229178,
+   "blind": false
+  },
+  "diffusiondrive": {
+   "cameras": "tri",
+   "lidar": true,
+   "latency_ms": 85.29960200030473,
+   "blind": false
+  },
+  "recogdrive": {
+   "cameras": "mono",
+   "lidar": false,
+   "latency_ms": 513.1726784966304,
+   "blind": false
+  },
+  "curious": {
+   "cameras": "mono",
+   "lidar": false,
+   "latency_ms": 4067.17485849731,
+   "blind": false
+  },
+  "autovla": {
+   "cameras": "tri",
+   "lidar": false,
+   "latency_ms": 1249.4580570019025,
+   "blind": false
+  },
+  "driveva": {
+   "cameras": "mono",
+   "lidar": false,
+   "latency_ms": 946.7916249996051,
+   "blind": false
+  }
+ },
+ "profiles": {
+  "Mono, 150 ms": {
+   "rig_cams": [
+    "flex",
+    "mono",
+    "none"
+   ],
+   "rig_lidar": false,
+   "budget_ms": 150
+  },
+  "Mono, 1.2 s": {
+   "rig_cams": [
+    "flex",
+    "mono",
+    "none"
+   ],
+   "rig_lidar": false,
+   "budget_ms": 1200
+  },
+  "Full, 150 ms": {
+   "rig_cams": [
+    "flex",
+    "mono",
+    "none",
+    "six",
+    "tri"
+   ],
+   "rig_lidar": true,
+   "budget_ms": 150
+  },
+  "Full, 1.2 s": {
+   "rig_cams": [
+    "flex",
+    "mono",
+    "none",
+    "six",
+    "tri"
+   ],
+   "rig_lidar": true,
+   "budget_ms": 1200
+  }
+ }
+}

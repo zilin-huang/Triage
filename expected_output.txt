@@ -1,0 +1,30 @@
+$ python code/latency_gate.py
+candidate       plans    p50    p95   >dl infer p50 gate value  gate
+LTF              5617  0.716  0.772     1     0.049      0.864  pass
+Latent-WAM       2870  0.822  0.884     0     0.109      0.884  pass
+DriveVLA-W0       310  0.884  1.007     7     0.559      1.007  pass
+ReCogDrive        562  1.149  1.204    38     0.743      1.204  fail
+DriveVA           291  1.524  1.580   291     1.031      1.580  fail
+Alpamayo-1.5      326  1.966  2.102   326     1.616      2.102  fail
+
+ranking by benchmark score alone : DriveVA (91.22), ReCogDrive (90.42), DriveVLA-W0 (90.30), LTF (84.14)
+gate-restricted ranking (Stage 4): DriveVLA-W0 (90.30), LTF (84.14)
+selected: DriveVLA-W0; challenger: LTF
+
+$ python code/selection_rules.py
+profile       feasible set                                                  score-first  Stage 4  uniform  oracle
+Mono, 150 ms  (empty)                                                 driveva (latency)       --       --      --
+Mono, 1.2 s   recogdrive, driveva                                                 +0.18     0.18     0.66    0.00
+Full, 150 ms  transfuser, ltf, diffusiondrive                           -3.45 (latency)     0.00     3.16    0.00
+Full, 1.2 s   transfuser, ltf, diffusiondrive, recogdrive, driveva                +0.18     0.18     4.34    0.00
+
+$ python code/closed_loop_table.py
+configuration                   reached  takeover at (m) plan age (s) steer (deg/s)  expired
+DriveVLA-W0                      4 of 5            133.9         1.48          50.0       0%
+LTF                              5 of 5               --         0.80          25.0       0%
+LTF, plans held 0.5 s longer     3 of 3               --         1.59          27.3       0%
+LTF, plans held 1.0 s longer     3 of 3               --         2.34          40.0       0%
+LTF, plans held 2.0 s longer     0 of 2      116.4, 59.3         3.88          80.0      44%
+LTF, side views blacked out      0 of 2       46.2, 48.0         0.82          26.5       0%
+LTF fine-tuned on local data     0 of 2       70.8, 73.2         0.83          22.5       0%
+

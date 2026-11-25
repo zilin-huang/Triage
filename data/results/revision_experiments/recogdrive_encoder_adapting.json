@@ -1,0 +1,1012 @@
+{
+ "exp_id": "trb_e4_recogdrive_fixgrad_v0",
+ "readout_script_sha256": "bdb703c84d691f699cc6360ce9ad8e9b9ab99173eab5897c48d5bde5e4fd456e",
+ "repo_commit": "e1afbb88dfacbee6268d782e6708c53e22a7ef82",
+ "V1_er4_arithmetic": {
+  "exact": true,
+  "reference": "outputs/triage_er4_vla_fovft_v0/readout.json",
+  "reference_sha256": "3a61bacbb08c6e1dfe2e09ff42522dfc59aa191b8f72d7c9f6a97bcbf328e4fd",
+  "pooled_checks_exact": 18,
+  "pooled_checks_total": 18,
+  "per_keep": {
+   "keep_0.6": {
+    "repairA_turn_m": {
+     "mine": 0.13044050641957827,
+     "er4": 0.13044050641957827,
+     "exact": true
+    },
+    "residual_turn_m": {
+     "mine": 0.05634835652378978,
+     "er4": 0.05634835652378978,
+     "exact": true
+    },
+    "residual_all_m": {
+     "mine": 0.0034795027399351364,
+     "er4": 0.0034795027399351364,
+     "exact": true
+    },
+    "damage_turn_m": {
+     "mine": 0.2214216253407949,
+     "er4": 0.2214216253407949,
+     "exact": true
+    },
+    "compensation": {
+     "mine": 0.7455155681516528,
+     "er4": 0.7455155681516528,
+     "exact": true
+    },
+    "rho_armA_turn": {
+     "mine": 0.21490096734543201,
+     "er4": 0.21490096734543201,
+     "exact": true
+    },
+    "rho_armB_turn": {
+     "mine": 0.3567278280749464,
+     "er4": 0.3567278280749464,
+     "exact": true
+    },
+    "E_R4_1_pass": {
+     "mine": true,
+     "er4": true,
+     "exact": true
+    },
+    "E_R4_1_status": {
+     "mine": "interpretable",
+     "er4": "interpretable",
+     "exact": true
+    },
+    "E_R4_3_pass": {
+     "mine": true,
+     "er4": true,
+     "exact": true
+    },
+    "E_R4_3_status": {
+     "mine": "interpretable",
+     "er4": "interpretable",
+     "exact": true
+    }
+   },
+   "keep_0.3": {
+    "repairA_turn_m": {
+     "mine": 0.13044050641957827,
+     "er4": 0.13044050641957827,
+     "exact": true
+    },
+    "residual_turn_m": {
+     "mine": 0.1327461994889223,
+     "er4": 0.1327461994889223,
+     "exact": true
+    },
+    "residual_all_m": {
+     "mine": 0.025936312342076384,
+     "er4": 0.025936312342076384,
+     "exact": true
+    },
+    "damage_turn_m": {
+     "mine": 0.37080163721994375,
+     "er4": 0.37080163721994375,
+     "exact": true
+    },
+    "compensation": {
+     "mine": 0.6420021214464517,
+     "er4": 0.6420021214464517,
+     "exact": true
+    },
+    "rho_armA_turn": {
+     "mine": 0.21490096734543201,
+     "er4": 0.21490096734543201,
+     "exact": true
+    },
+    "rho_armB_turn": {
+     "mine": 0.3768695128066943,
+     "er4": 0.3768695128066943,
+     "exact": true
+    },
+    "E_R4_1_pass": {
+     "mine": true,
+     "er4": true,
+     "exact": true
+    },
+    "E_R4_1_status": {
+     "mine": "interpretable",
+     "er4": "interpretable",
+     "exact": true
+    },
+    "E_R4_3_pass": {
+     "mine": true,
+     "er4": true,
+     "exact": true
+    },
+    "E_R4_3_status": {
+     "mine": "interpretable",
+     "er4": "interpretable",
+     "exact": true
+    }
+   }
+  },
+  "E_R4_2": {
+   "mine": true,
+   "er4": true,
+   "exact": true
+  },
+  "headline_reproduced": {
+   "residual_turn_m": 0.05634835652378978,
+   "repair_turn_m": 0.13044050641957827,
+   "residual_over_repair": 0.43198511007415297,
+   "compensation": 0.7455155681516528,
+   "keep_0.3_residual_over_repair": 1.0176762045213736,
+   "keep_0.3_compensation": 0.6420021214464517
+  }
+ },
+ "V2_per_frame_reconstruction": {
+  "exact": true,
+  "per_variant": {
+   "zeroshot_native": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_native": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "zeroshot_crop": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_crop": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   }
+  }
+ },
+ "definitions": "TRIAGE rebuttal E4 readout: ReCogDrive-2B fixed-recipe (vision LoRA\ntrains) RQ2 crop fine-tune, all numbers from the Pro 6000.\n\nDefinitions are ER4's (scripts/101 assemble_er4), unchanged:\n  pooled E_s(v)   = sum_city mean_l2_at_2s * n / sum_city n, stratum s in\n                    {all, turn, straight}; L2 between plan point at 2 s and\n                    the human 2-s position; turning = |dyaw(2 s)| >= 15 deg\n  repair_turn     = E_turn(zero-shot native) - E_turn(adapted native)\n  residual_turn   = E_turn(adapted crop k)   - E_turn(adapted native)\n  damage_turn     = E_turn(zero-shot crop k) - E_turn(zero-shot native)\n  compensation    = 1 - residual_turn / damage_turn (only if damage >= 0.10)\n  E_R4_1, E_R4_2, E_R4_3 rules verbatim.",
+ "interpretation_rule": "outputs/trb_e4_recogdrive_fixgrad_v0/README.md (fixed before any E4 arm read)",
+ "arms": {
+  "k030_s1": {
+   "status": "success",
+   "gradient_reach_vision": "96/96",
+   "gradient_reach_pass": true,
+   "vision_lora_B_fro_final": 6.224494080845564,
+   "epoch_losses": [
+    0.01382895330061054,
+    0.009847395983032307,
+    0.00849205486858518,
+    0.005576034714658014,
+    0.004484581237996626
+   ],
+   "wall_seconds": 223883.0,
+   "gpu_uuid": "GPU-8c97d046-04c0-532d-164d-94d2fa820da9"
+  },
+  "k045_s1": {
+   "status": "success",
+   "gradient_reach_vision": "96/96",
+   "gradient_reach_pass": true,
+   "vision_lora_B_fro_final": 6.430939524334629,
+   "epoch_losses": [
+    0.01327066092484137,
+    0.009674317161450648,
+    0.0081095719086032,
+    0.005375111750894558,
+    0.004236042156795988
+   ],
+   "wall_seconds": 172561.0,
+   "gpu_uuid": "GPU-bb3a5585-e1ad-8eb4-d652-7b8b923ba7aa"
+  },
+  "k060_s1": {
+   "status": "success",
+   "gradient_reach_vision": "96/96",
+   "gradient_reach_pass": true,
+   "vision_lora_B_fro_final": 6.452414273045583,
+   "epoch_losses": [
+    0.0131588088273039,
+    0.009435601801475133,
+    0.008080920280556259,
+    0.0052542222883967165,
+    0.004073586114158734
+   ],
+   "wall_seconds": 172516.6,
+   "gpu_uuid": "GPU-bb3a5585-e1ad-8eb4-d652-7b8b923ba7aa"
+  },
+  "k060_s2": {
+   "status": "success",
+   "gradient_reach_vision": "96/96",
+   "gradient_reach_pass": true,
+   "vision_lora_B_fro_final": 6.375252710910482,
+   "epoch_losses": [
+    0.013607111464560407,
+    0.00934350198995402,
+    0.008064306273994647,
+    0.005675478469394654,
+    0.00429821676374779
+   ],
+   "wall_seconds": 167668.2,
+   "gpu_uuid": "GPU-bb3a5585-e1ad-8eb4-d652-7b8b923ba7aa"
+  },
+  "k075_s1": {
+   "status": "success",
+   "gradient_reach_vision": "96/96",
+   "gradient_reach_pass": true,
+   "vision_lora_B_fro_final": 6.064779135452946,
+   "epoch_losses": [
+    0.012836006848231385,
+    0.009356034154119173,
+    0.007805226397454851,
+    0.005102816404757981,
+    0.003995407205860866
+   ],
+   "wall_seconds": 223758.6,
+   "gpu_uuid": "GPU-8c97d046-04c0-532d-164d-94d2fa820da9"
+  },
+  "native_s1": {
+   "status": "success",
+   "gradient_reach_vision": "96/96",
+   "gradient_reach_pass": true,
+   "vision_lora_B_fro_final": 6.503865884399421,
+   "epoch_losses": [
+    0.012856691490994618,
+    0.009401013067951757,
+    0.0077881668690742405,
+    0.005121691718194977,
+    0.003972404200587252
+   ],
+   "wall_seconds": 223394.9,
+   "gpu_uuid": "GPU-8c97d046-04c0-532d-164d-94d2fa820da9"
+  },
+  "native_s2": {
+   "status": "success",
+   "gradient_reach_vision": "96/96",
+   "gradient_reach_pass": true,
+   "vision_lora_B_fro_final": 6.439745955403725,
+   "epoch_losses": [
+    0.01338210753918996,
+    0.009330539055134777,
+    0.007964592522315626,
+    0.005593669681986699,
+    0.004155753510626855
+   ],
+   "wall_seconds": 217066.5,
+   "gpu_uuid": "GPU-8c97d046-04c0-532d-164d-94d2fa820da9"
+  }
+ },
+ "e4": {
+  "available_labels": [
+   "ft_k030_s1",
+   "ft_k045_s1",
+   "ft_k060_s1",
+   "ft_k060_s2",
+   "ft_k075_s1",
+   "ft_native_s1",
+   "ft_native_s2",
+   "zs_k030",
+   "zs_k045",
+   "zs_k060",
+   "zs_k075",
+   "zs_native"
+  ],
+  "pooled": {
+   "zs_native": {
+    "all": {
+     "mean_l2_at_2s": 0.514791045362926,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.6083517359381808,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.5100369887578202,
+     "n": 4369
+    }
+   },
+   "zs_k075": {
+    "all": {
+     "mean_l2_at_2s": 0.5389541945114663,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.6957954372338783,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.5309846921346352,
+     "n": 4369
+    }
+   },
+   "zs_k060": {
+    "all": {
+     "mean_l2_at_2s": 0.6051282234691897,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.8268189199227948,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.5938635554415632,
+     "n": 4369
+    }
+   },
+   "zs_k045": {
+    "all": {
+     "mean_l2_at_2s": 0.6750608831102303,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.9469835952808958,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.6612437986282236,
+     "n": 4369
+    }
+   },
+   "zs_k030": {
+    "all": {
+     "mean_l2_at_2s": 0.7649185714937226,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.9780769469293763,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.7540874523939939,
+     "n": 4369
+    }
+   },
+   "ft_native_s1": {
+    "all": {
+     "mean_l2_at_2s": 0.3256533973686399,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.49129784681694816,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.3172365816722507,
+     "n": 4369
+    }
+   },
+   "ft_k075_s1": {
+    "all": {
+     "mean_l2_at_2s": 0.3329621990024604,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.5323610827585612,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.32283023466420124,
+     "n": 4369
+    }
+   },
+   "ft_k060_s1": {
+    "all": {
+     "mean_l2_at_2s": 0.33995850166355546,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.5131180250443609,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.33115982595045435,
+     "n": 4369
+    }
+   },
+   "ft_k045_s1": {
+    "all": {
+     "mean_l2_at_2s": 0.3402839881757432,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.5466351092838623,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.32979876297867233,
+     "n": 4369
+    }
+   },
+   "ft_k030_s1": {
+    "all": {
+     "mean_l2_at_2s": 0.3510751341799243,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.5811656332754915,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.3393836508200671,
+     "n": 4369
+    }
+   },
+   "ft_native_s2": {
+    "all": {
+     "mean_l2_at_2s": 0.3105551249160464,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.4837975755426874,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.3017522354587074,
+     "n": 4369
+    }
+   },
+   "ft_k060_s2": {
+    "all": {
+     "mean_l2_at_2s": 0.31911050466101576,
+     "n": 4591
+    },
+    "turn": {
+     "mean_l2_at_2s": 0.50955203440099,
+     "n": 222
+    },
+    "straight": {
+     "mean_l2_at_2s": 0.3094336862581148,
+     "n": 4369
+    }
+   }
+  },
+  "per_frame_reconstruction_exact": {
+   "zs_native": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "zs_k075": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "zs_k060": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "zs_k045": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "zs_k030": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_native_s1": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_k075_s1": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_k060_s1": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_k045_s1": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_k030_s1": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_native_s2": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   },
+   "ft_k060_s2": {
+    "sg-one-north": true,
+    "us-ma-boston": true,
+    "us-nv-las-vegas-strip": true,
+    "us-pa-pittsburgh-hazelwood": true
+   }
+  },
+  "per_keep": {
+   "keep_0.75": {
+    "s1": {
+     "repairA_turn_m": 0.11705388912123266,
+     "residual_turn_m": 0.04106323594161304,
+     "residual_all_m": 0.007308801633820472,
+     "damage_turn_m": 0.08744370129569745,
+     "compensation": null,
+     "rho_armA_turn": 0.1924115313663334,
+     "rho_armB_turn": 0.23488851137777977,
+     "E_R4_1_pass": true,
+     "E_R4_1_status": "interpretable",
+     "E_R4_3_pass": false,
+     "E_R4_3_status": "inconclusive_no_zeroshot_damage",
+     "residual_straight_m": 0.005593652991950526,
+     "residual_over_repair_turn": 0.3508062504363598,
+     "compensation_raw": 0.5304037302497682,
+     "bootstrap_95": {
+      "residual_all": {
+       "lo": 0.0017616465259444338,
+       "hi": 0.013071746903504346,
+       "n_blocks": 238,
+       "n_frames": 4591,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_turn": {
+       "lo": 0.016750251369984776,
+       "hi": 0.06385845566473489,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_straight": {
+       "lo": -3.4691323918556376e-05,
+       "hi": 0.011580532983871341,
+       "n_blocks": 238,
+       "n_frames": 4369,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "compensation_turn": {
+       "lo": -0.12390194826777018,
+       "hi": 0.7976772314619849,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "damage_turn": {
+       "lo": 0.030805326308845235,
+       "hi": 0.14585538352322144,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "repair_turn": {
+       "lo": 0.04382938256881023,
+       "hi": 0.18162896616589205,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      }
+     }
+    },
+    "s2": {
+     "status": "incomplete",
+     "missing": [
+      "ft_k075_s2"
+     ]
+    }
+   },
+   "keep_0.6": {
+    "s1": {
+     "repairA_turn_m": 0.11705388912123266,
+     "residual_turn_m": 0.021820178227412723,
+     "residual_all_m": 0.01430510429491555,
+     "damage_turn_m": 0.21846718398461396,
+     "compensation": 0.9001214835590619,
+     "rho_armA_turn": 0.1924115313663334,
+     "rho_armB_turn": 0.37940701079714784,
+     "E_R4_1_pass": false,
+     "E_R4_1_status": "interpretable",
+     "E_R4_3_pass": false,
+     "E_R4_3_status": "interpretable",
+     "residual_straight_m": 0.013923244278203628,
+     "residual_over_repair_turn": 0.1864113904392666,
+     "compensation_raw": 0.9001214835590619,
+     "bootstrap_95": {
+      "residual_all": {
+       "lo": 0.008153374623940609,
+       "hi": 0.02081619916238187,
+       "n_blocks": 238,
+       "n_frames": 4591,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_turn": {
+       "lo": -0.0009630083826912522,
+       "hi": 0.044863970381652456,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_straight": {
+       "lo": 0.007715798777007075,
+       "hi": 0.020600234019814666,
+       "n_blocks": 238,
+       "n_frames": 4369,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "compensation_turn": {
+       "lo": 0.7882702357643361,
+       "hi": 1.0044498363047516,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "damage_turn": {
+       "lo": 0.13339208936020813,
+       "hi": 0.30754549376165613,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "repair_turn": {
+       "lo": 0.04382938256881023,
+       "hi": 0.18162896616589205,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      }
+     }
+    },
+    "s2": {
+     "repairA_turn_m": 0.12455416039549344,
+     "residual_turn_m": 0.025754458858302576,
+     "residual_all_m": 0.008555379744969338,
+     "damage_turn_m": 0.21846718398461396,
+     "compensation": 0.8821129178828231,
+     "rho_armA_turn": 0.20474037146193058,
+     "rho_armB_turn": 0.3837199148169348,
+     "E_R4_1_pass": false,
+     "E_R4_1_status": "interpretable",
+     "E_R4_3_pass": false,
+     "E_R4_3_status": "interpretable",
+     "residual_straight_m": 0.007681450799407408,
+     "residual_over_repair_turn": 0.20677317222102531,
+     "compensation_raw": 0.8821129178828231,
+     "bootstrap_95": {
+      "residual_all": {
+       "lo": 0.002395104133894947,
+       "hi": 0.015175288764066427,
+       "n_blocks": 238,
+       "n_frames": 4591,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_turn": {
+       "lo": -0.0005238746563784115,
+       "hi": 0.05158680282601606,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_straight": {
+       "lo": 0.0014361486815046675,
+       "hi": 0.014627954901112131,
+       "n_blocks": 238,
+       "n_frames": 4369,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "compensation_turn": {
+       "lo": 0.7471354600499954,
+       "hi": 1.002254514778699,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "damage_turn": {
+       "lo": 0.13339208936020813,
+       "hi": 0.30754549376165613,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "repair_turn": {
+       "lo": 0.04603340863995779,
+       "hi": 0.19423961616455923,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      }
+     }
+    }
+   },
+   "keep_0.45": {
+    "s1": {
+     "repairA_turn_m": 0.11705388912123266,
+     "residual_turn_m": 0.05533726246691412,
+     "residual_all_m": 0.014630590807103272,
+     "damage_turn_m": 0.338631859342715,
+     "compensation": 0.8365857761454465,
+     "rho_armA_turn": 0.1924115313663334,
+     "rho_armB_turn": 0.4227617965000561,
+     "E_R4_1_pass": true,
+     "E_R4_1_status": "interpretable",
+     "E_R4_3_pass": false,
+     "E_R4_3_status": "interpretable",
+     "residual_straight_m": 0.012562181306421616,
+     "residual_over_repair_turn": 0.47275031083846636,
+     "compensation_raw": 0.8365857761454465,
+     "bootstrap_95": {
+      "residual_all": {
+       "lo": 0.007211437422666231,
+       "hi": 0.02299182858019324,
+       "n_blocks": 238,
+       "n_frames": 4591,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_turn": {
+       "lo": 0.01390797903076334,
+       "hi": 0.10075448141886446,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_straight": {
+       "lo": 0.005266524323645265,
+       "hi": 0.02066009927269145,
+       "n_blocks": 238,
+       "n_frames": 4369,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "compensation_turn": {
+       "lo": 0.704217656630321,
+       "hi": 0.9557513922367237,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "damage_turn": {
+       "lo": 0.22697747586942352,
+       "hi": 0.4631170478491462,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "repair_turn": {
+       "lo": 0.04382938256881023,
+       "hi": 0.18162896616589205,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      }
+     }
+    },
+    "s2": {
+     "status": "incomplete",
+     "missing": [
+      "ft_k045_s2"
+     ]
+    }
+   },
+   "keep_0.3": {
+    "s1": {
+     "repairA_turn_m": 0.11705388912123266,
+     "residual_turn_m": 0.08986778645854337,
+     "residual_all_m": 0.0254217368112844,
+     "damage_turn_m": 0.3697252109911955,
+     "compensation": 0.7569335717799254,
+     "rho_armA_turn": 0.1924115313663334,
+     "rho_armB_turn": 0.40580786092542925,
+     "E_R4_1_pass": true,
+     "E_R4_1_status": "interpretable",
+     "E_R4_3_pass": false,
+     "E_R4_3_status": "interpretable",
+     "residual_straight_m": 0.02214706914781639,
+     "residual_over_repair_turn": 0.7677471217164544,
+     "compensation_raw": 0.7569335717799254,
+     "bootstrap_95": {
+      "residual_all": {
+       "lo": 0.016212928610225746,
+       "hi": 0.03416460344881368,
+       "n_blocks": 238,
+       "n_frames": 4591,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_turn": {
+       "lo": 0.044223572123179414,
+       "hi": 0.14119817824862343,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "residual_straight": {
+       "lo": 0.012983415801071287,
+       "hi": 0.030852431242591037,
+       "n_blocks": 238,
+       "n_frames": 4369,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "compensation_turn": {
+       "lo": 0.6411379836966996,
+       "hi": 0.8565167872859737,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "damage_turn": {
+       "lo": 0.25014952781342387,
+       "hi": 0.5236973571093667,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      },
+      "repair_turn": {
+       "lo": 0.04382938256881023,
+       "hi": 0.18162896616589205,
+       "n_blocks": 32,
+       "n_frames": 222,
+       "n_boot": 2000,
+       "n_finite": 2000
+      }
+     }
+    },
+    "s2": {
+     "status": "incomplete",
+     "missing": [
+      "ft_k030_s2"
+     ]
+    }
+   }
+  },
+  "seed_spread": {
+   "all": {
+    "S_m": 0.020847997002539698,
+    "n_pairs": 2,
+    "pairs": [
+     0.015098272452593486,
+     0.020847997002539698
+    ]
+   },
+   "turn": {
+    "S_m": 0.0075002712742607835,
+    "n_pairs": 2,
+    "pairs": [
+     0.0075002712742607835,
+     0.003565990643370931
+    ]
+   },
+   "straight": {
+    "S_m": 0.021726139692339552,
+    "n_pairs": 2,
+    "pairs": [
+     0.015484346213543332,
+     0.021726139692339552
+    ]
+   }
+  },
+  "verdict": {
+   "keep_0.75": {
+    "state": "persists",
+    "P_turn_per_seed_m": [
+     0.04106323594161304
+    ],
+    "P_turn_mean_m": 0.04106323594161304,
+    "bootstrap_lo_per_seed_m": [
+     0.016750251369984776
+    ],
+    "S_turn_m": 0.0075002712742607835,
+    "all_seeds_positive": true,
+    "ci_excludes_zero": true,
+    "above_seed_spread": true,
+    "n_seeds": 1,
+    "assumption": "S is measured at keep 0.6 and native; applied to this keep assuming similar seed noise"
+   },
+   "keep_0.6": {
+    "state": "does_not_persist",
+    "P_turn_per_seed_m": [
+     0.021820178227412723,
+     0.025754458858302576
+    ],
+    "P_turn_mean_m": 0.02378731854285765,
+    "bootstrap_lo_per_seed_m": [
+     -0.0009630083826912522,
+     -0.0005238746563784115
+    ],
+    "S_turn_m": 0.0075002712742607835,
+    "all_seeds_positive": true,
+    "ci_excludes_zero": false,
+    "above_seed_spread": true,
+    "n_seeds": 2,
+    "assumption": null
+   },
+   "keep_0.45": {
+    "state": "persists",
+    "P_turn_per_seed_m": [
+     0.05533726246691412
+    ],
+    "P_turn_mean_m": 0.05533726246691412,
+    "bootstrap_lo_per_seed_m": [
+     0.01390797903076334
+    ],
+    "S_turn_m": 0.0075002712742607835,
+    "all_seeds_positive": true,
+    "ci_excludes_zero": true,
+    "above_seed_spread": true,
+    "n_seeds": 1,
+    "assumption": "S is measured at keep 0.6 and native; applied to this keep assuming similar seed noise"
+   },
+   "keep_0.3": {
+    "state": "persists",
+    "P_turn_per_seed_m": [
+     0.08986778645854337
+    ],
+    "P_turn_mean_m": 0.08986778645854337,
+    "bootstrap_lo_per_seed_m": [
+     0.044223572123179414
+    ],
+    "S_turn_m": 0.0075002712742607835,
+    "all_seeds_positive": true,
+    "ci_excludes_zero": true,
+    "above_seed_spread": true,
+    "n_seeds": 1,
+    "assumption": "S is measured at keep 0.6 and native; applied to this keep assuming similar seed noise"
+   }
+  },
+  "cross_host_reference_a6000": {
+   "note": "A6000 ER4/ER5 rows vs Pro 6000 E4 rows on the same frames and per-token seeds; reference only, never mixed",
+   "pairs": {
+    "zs_native~zeroshot_native": {
+     "all": 0.0005076805444338417,
+     "turn": 0.0013721209515805688,
+     "straight": 0.0004637561291471748
+    },
+    "zs_k060~zeroshot_crop": {
+     "all": -0.00017454373274961021,
+     "turn": -0.0015823204046003791,
+     "straight": -0.00010301102019494301
+    },
+    "zs_k030~zeroshot_crop03": {
+     "all": 0.00012277318475839571,
+     "turn": 0.000295694722832307,
+     "straight": 0.00011398660168393526
+    }
+   }
+  }
+ },
+ "wall_s": 27.2
+}

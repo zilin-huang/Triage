@@ -1,0 +1,57 @@
+{
+  "packet": "docs/TRIAGE_DTR7_ENGAGEMENT_ANCHOR_2026-08-23.md",
+  "config_id": "uniad_nusc_born",
+  "city": "us-ma-boston",
+  "checkpoint": "/work/checkpoints/uniad_nusc/uniad_base_e2e.pth",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "n_baseline_plans": 1200,
+  "n_model_failures": 0,
+  "model_failure_kinds": {},
+  "n_perturb_frames": 120,
+  "n_perturb_failures": 0,
+  "sign_diagnostic": 0.8588957055214724,
+  "n_turning_frames": 163,
+  "probe_schema_id": "probe_schema_v1",
+  "probe_schema_sha256": "90a3f22fbc08898b8cbfbcab43cef83d3f59fc8a9f3f61066d0ea13c4da447cf",
+  "dose_displacement_mean": {
+    "gamma": 3.9162456845774694,
+    "jpeg": 3.6467711931895455
+  },
+  "dose_displacement_per_level": {
+    "gamma": {
+      "1.8": 4.1389687887681905,
+      "2.6": 3.693522580386748
+    },
+    "jpeg": {
+      "50": 3.5826581753805358,
+      "20": 3.7108842109985556
+    }
+  },
+  "anchor": {
+    "D_gray": 4.561766584969553,
+    "D_noise": 4.387948710051169,
+    "n_gray": 120,
+    "n_noise": 120
+  },
+  "engagement_normalized": {
+    "gamma": 0.8584932200347571,
+    "jpeg": 0.7994208220133835
+  },
+  "instrument_checks": {
+    "state_advance_floor_mean": 0.24222260395704334,
+    "state_advance_floor_max": 0.4125654517614148,
+    "state_advance_floor_n": 5,
+    "pass_order": [
+      "gamma1.8",
+      "gamma2.6",
+      "jpeg50",
+      "jpeg20",
+      "gray",
+      "noise",
+      "gray_repeat"
+    ],
+    "monotonicity_D_gray_gt_doses": true
+  },
+  "repo_commit": "346d108e75af702ec6315bfcd8806fc482f2230f"
+}

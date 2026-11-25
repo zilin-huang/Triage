@@ -1,0 +1,26 @@
+{
+  "exp_id": "lineb_res_dose_v0",
+  "decision_packet": "docs/TRIAGE_DTR5_POOL_MODERNIZATION_2026-08-22.md",
+  "agent": "drivevlaw0",
+  "city": "us-nv-las-vegas-strip",
+  "n_frames": 117,
+  "keep_ratios": [
+    0.75,
+    0.5,
+    0.33
+  ],
+  "mean_displacement_m": {
+    "0.75": 0.4961675326228947,
+    "0.5": 0.5609076783515661,
+    "0.33": 0.7297878813120469
+  },
+  "n_per_dose": {
+    "0.75": 117,
+    "0.5": 117,
+    "0.33": 117
+  },
+  "res_response_auc": 0.4535290530165321,
+  "adapter_note": "scripts/102 adapter; degrade-then-official-VQ-re-encode on both consumed CAM_F0 frames; baseline = re-encoded clean",
+  "namespace": "open_loop cross-source; never enters m4/G2",
+  "repo_commit": "3ce0fb47f0c063ed74431721c77f37225dcee22f"
+}

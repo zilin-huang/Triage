@@ -1,0 +1,1 @@
+{"what":"kappa","model":"drivevlaw0","n_windows":2842,"windows_skipped_missing":24,"settings":{"attn":"sdpa","dtype":"bf16","loading_missing":0},"D_mean":{"fov":{"0.9":1.08919,"0.75":1.60593,"0.6":2.30917},"res":{"0.75":0.678763,"0.5":0.868666,"0.33":0.910219}},"n_stride_windows":285,"kappa":2.36597}

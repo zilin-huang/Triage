@@ -1,0 +1,64 @@
+{
+  "packet": "docs/TRIAGE_DTR7_ENGAGEMENT_ANCHOR_2026-08-23.md sec.11",
+  "stage": "E-N4 state-advance curve",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "config_id": "uniad_b2d_born",
+  "city": "us-ma-boston",
+  "checkpoint": "/work/checkpoints/uniad_b2d_base/uniad_base_b2d.pth",
+  "repeats": 6,
+  "n_baseline_plans": 1200,
+  "n_baseline_failures": 0,
+  "n_stride_frames": 120,
+  "n_repeat_failures": 0,
+  "probe_position_map": {
+    "gamma": [
+      1,
+      2
+    ],
+    "jpeg": [
+      3,
+      4
+    ],
+    "gray": [
+      5
+    ],
+    "noise": [
+      6
+    ]
+  },
+  "drift_k": {
+    "2": {
+      "mean": 4.18753433410623,
+      "median": 3.7737264460842015,
+      "p95": 11.385006484640781,
+      "n": 120
+    },
+    "3": {
+      "mean": 4.108259197344393,
+      "median": 3.1075602601714434,
+      "p95": 10.849478264962698,
+      "n": 120
+    },
+    "4": {
+      "mean": 4.069344959994932,
+      "median": 2.9366599197541037,
+      "p95": 10.30451356385185,
+      "n": 120
+    },
+    "5": {
+      "mean": 4.041587666790821,
+      "median": 3.0000798793979486,
+      "p95": 10.135852686193358,
+      "n": 120
+    },
+    "6": {
+      "mean": 4.042169062507048,
+      "median": 3.0457433748270217,
+      "p95": 10.051363787272697,
+      "n": 120
+    }
+  },
+  "monotone_in_k": false,
+  "repo_commit": "346d108e75af702ec6315bfcd8806fc482f2230f"
+}

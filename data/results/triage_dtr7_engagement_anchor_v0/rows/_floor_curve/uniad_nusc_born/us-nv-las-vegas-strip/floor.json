@@ -1,0 +1,64 @@
+{
+  "packet": "docs/TRIAGE_DTR7_ENGAGEMENT_ANCHOR_2026-08-23.md sec.11",
+  "stage": "E-N4 state-advance curve",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "config_id": "uniad_nusc_born",
+  "city": "us-nv-las-vegas-strip",
+  "checkpoint": "/work/checkpoints/uniad_nusc/uniad_base_e2e.pth",
+  "repeats": 6,
+  "n_baseline_plans": 1200,
+  "n_baseline_failures": 0,
+  "n_stride_frames": 120,
+  "n_repeat_failures": 0,
+  "probe_position_map": {
+    "gamma": [
+      1,
+      2
+    ],
+    "jpeg": [
+      3,
+      4
+    ],
+    "gray": [
+      5
+    ],
+    "noise": [
+      6
+    ]
+  },
+  "drift_k": {
+    "2": {
+      "mean": 1.6913098850846704,
+      "median": 1.5874520713631501,
+      "p95": 4.49770048757081,
+      "n": 120
+    },
+    "3": {
+      "mean": 1.770925247242087,
+      "median": 1.3975167286267154,
+      "p95": 4.5876672113634624,
+      "n": 120
+    },
+    "4": {
+      "mean": 1.8067212341202676,
+      "median": 1.4448533955645109,
+      "p95": 4.726281609412896,
+      "n": 120
+    },
+    "5": {
+      "mean": 1.8661667885307651,
+      "median": 1.5436875910936596,
+      "p95": 4.919697040685984,
+      "n": 120
+    },
+    "6": {
+      "mean": 1.926047744412398,
+      "median": 1.5957420546839867,
+      "p95": 5.026439153211692,
+      "n": 120
+    }
+  },
+  "monotone_in_k": true,
+  "repo_commit": "346d108e75af702ec6315bfcd8806fc482f2230f"
+}

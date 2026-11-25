@@ -1,0 +1,42 @@
+{
+  "packet": "docs/TRIAGE_DTR7_ENGAGEMENT_ANCHOR_2026-08-23.md",
+  "config_id": "transfuser",
+  "city": "us-ma-boston",
+  "carrier_state": "stateless_per_frame",
+  "n_baseline_plans": 1191,
+  "n_model_failures": 0,
+  "n_perturb_frames": 120,
+  "n_ablated_views_per_frame": 8,
+  "probe_schema_id": "probe_schema_v1",
+  "probe_schema_sha256": "90a3f22fbc08898b8cbfbcab43cef83d3f59fc8a9f3f61066d0ea13c4da447cf",
+  "dose_displacement_mean": {
+    "gamma": 0.3577823486427929,
+    "jpeg": 0.24544867883809235
+  },
+  "anchor": {
+    "D_gray": 0.7623153573303016,
+    "D_noise": 0.7522655922371068,
+    "n_gray": 120,
+    "n_noise": 120
+  },
+  "engagement_normalized": {
+    "gamma": 0.46933640415664657,
+    "jpeg": 0.32197787500658015
+  },
+  "instrument_checks": {
+    "paired_determinism_max_abs_delta": 0.0,
+    "blind_anchor_expected_zero": false,
+    "blind_anchor_holds": null,
+    "monotonicity_D_gray_gt_doses": true,
+    "pass_order": [
+      "gamma1.8",
+      "gamma2.6",
+      "jpeg50",
+      "jpeg20",
+      "gray",
+      "noise",
+      "gray_repeat"
+    ]
+  },
+  "repo_commit": "0e96d4dbe5ba13f2e263477071379ef89bda1b3b"
+}

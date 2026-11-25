@@ -1,0 +1,44 @@
+{
+  "packet": "docs/TRIAGE_DTR7_ENGAGEMENT_ANCHOR_2026-08-23.md",
+  "config_id": "diffusiondrive",
+  "city": "us-nv-las-vegas-strip",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "carrier_state": "stateless_per_frame",
+  "n_baseline_plans": 1191,
+  "n_model_failures": 0,
+  "n_perturb_frames": 120,
+  "n_ablated_views_per_frame": 8,
+  "probe_schema_id": "probe_schema_v1",
+  "probe_schema_sha256": "90a3f22fbc08898b8cbfbcab43cef83d3f59fc8a9f3f61066d0ea13c4da447cf",
+  "dose_displacement_mean": {
+    "gamma": 0.287656923631574,
+    "jpeg": 0.19260409731299521
+  },
+  "anchor": {
+    "D_gray": 0.9470690542679889,
+    "D_noise": 0.8456136690766675,
+    "n_gray": 120,
+    "n_noise": 120
+  },
+  "engagement_normalized": {
+    "gamma": 0.3037338432031343,
+    "jpeg": 0.20336858906435631
+  },
+  "instrument_checks": {
+    "paired_determinism_max_abs_delta": 0.01354014403986814,
+    "blind_anchor_expected_zero": false,
+    "blind_anchor_holds": null,
+    "monotonicity_D_gray_gt_doses": true,
+    "pass_order": [
+      "gamma1.8",
+      "gamma2.6",
+      "jpeg50",
+      "jpeg20",
+      "gray",
+      "noise",
+      "gray_repeat"
+    ]
+  },
+  "repo_commit": "346d108e75af702ec6315bfcd8806fc482f2230f"
+}

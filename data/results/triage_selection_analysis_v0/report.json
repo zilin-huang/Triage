@@ -1,0 +1,191 @@
+{
+  "exp_id": "triage_selection_analysis_v0",
+  "contracts": {
+    "cv": {
+      "cams": "none",
+      "lidar": false,
+      "lat": 0.03,
+      "pdms": 20.65,
+      "blind": true
+    },
+    "ego_mlp": {
+      "cams": "none",
+      "lidar": false,
+      "lat": 0.12,
+      "pdms": 65.52,
+      "blind": true
+    },
+    "tcp": {
+      "cams": "mono",
+      "lidar": false,
+      "lat": 62.8,
+      "pdms": null,
+      "origin": "carla"
+    },
+    "ltf": {
+      "cams": "tri",
+      "lidar": false,
+      "lat": 97.4,
+      "pdms": 84.14
+    },
+    "transfuser": {
+      "cams": "tri",
+      "lidar": true,
+      "lat": 97.7,
+      "pdms": 83.39
+    },
+    "diffusiondrive": {
+      "cams": "tri",
+      "lidar": true,
+      "lat": 121.9,
+      "pdms": 88.11
+    },
+    "recogdrive": {
+      "cams": "mono",
+      "lidar": false,
+      "lat": 504.6,
+      "pdms": 90.42
+    },
+    "driveva": {
+      "cams": "mono",
+      "lidar": false,
+      "lat": 933.0,
+      "pdms": 91.22
+    },
+    "autovla": {
+      "cams": "mono",
+      "lidar": false,
+      "lat": 1262.6,
+      "pdms": 89.39
+    },
+    "curious": {
+      "cams": "mono",
+      "lidar": false,
+      "lat": 3949.5,
+      "pdms": 89.76
+    },
+    "simlingo": {
+      "cams": "wide110",
+      "lidar": false,
+      "lat": 597.8,
+      "pdms": null,
+      "origin": "carla"
+    },
+    "uniad": {
+      "cams": "six",
+      "lidar": false,
+      "lat": 722.0,
+      "pdms": null,
+      "origin": "carla"
+    },
+    "vad": {
+      "cams": "six",
+      "lidar": false,
+      "lat": 567.4,
+      "pdms": null,
+      "origin": "carla"
+    }
+  },
+  "profiles": {
+    "P1_mono_realtime": {
+      "rig_cams": [
+        "mono",
+        "none"
+      ],
+      "rig_lidar": false,
+      "budget_ms": 150
+    },
+    "P2_mono_lowspeed": {
+      "rig_cams": [
+        "mono",
+        "none"
+      ],
+      "rig_lidar": false,
+      "budget_ms": 1200
+    },
+    "P3_full_realtime": {
+      "rig_cams": [
+        "mono",
+        "none",
+        "six",
+        "tri"
+      ],
+      "rig_lidar": true,
+      "budget_ms": 150
+    },
+    "P4_full_lowspeed": {
+      "rig_cams": [
+        "mono",
+        "none",
+        "six",
+        "tri"
+      ],
+      "rig_lidar": true,
+      "budget_ms": 1200
+    }
+  },
+  "rows": [
+    {
+      "profile": "P1_mono_realtime",
+      "score_first_pick": "driveva",
+      "score_first_violation": "time",
+      "carla_champ_pick": "simlingo",
+      "carla_champ_violation": "info",
+      "triage_pick": "tcp",
+      "triage_pick_unscored_flag": true,
+      "triage_survivors": [
+        "tcp"
+      ]
+    },
+    {
+      "profile": "P2_mono_lowspeed",
+      "score_first_pick": "driveva",
+      "score_first_violation": null,
+      "carla_champ_pick": "simlingo",
+      "carla_champ_violation": "info",
+      "triage_pick": "driveva",
+      "triage_pick_unscored_flag": false,
+      "triage_survivors": [
+        "driveva",
+        "recogdrive",
+        "tcp"
+      ]
+    },
+    {
+      "profile": "P3_full_realtime",
+      "score_first_pick": "driveva",
+      "score_first_violation": "time",
+      "carla_champ_pick": "simlingo",
+      "carla_champ_violation": "info",
+      "triage_pick": "diffusiondrive",
+      "triage_pick_unscored_flag": false,
+      "triage_survivors": [
+        "diffusiondrive",
+        "ltf",
+        "tcp",
+        "transfuser"
+      ]
+    },
+    {
+      "profile": "P4_full_lowspeed",
+      "score_first_pick": "driveva",
+      "score_first_violation": null,
+      "carla_champ_pick": "simlingo",
+      "carla_champ_violation": "info",
+      "triage_pick": "driveva",
+      "triage_pick_unscored_flag": false,
+      "triage_survivors": [
+        "diffusiondrive",
+        "driveva",
+        "ltf",
+        "recogdrive",
+        "tcp",
+        "transfuser",
+        "uniad",
+        "vad"
+      ]
+    }
+  ],
+  "non_claim": "analysis over measured contracts/latency/open-loop scores; latency=A6000 shadow (conservative); open_loop namespace",
+  "repo_commit": "326842afae952704ae634d13424a5327583f8e3f"
+}

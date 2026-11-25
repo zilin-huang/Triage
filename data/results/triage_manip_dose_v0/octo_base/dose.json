@@ -1,0 +1,84 @@
+{
+  "exp_id": "triage_manip_dose_v0",
+  "decision_packet": "docs/TRIAGE_DTR2_MANIPULATION_PORTABILITY_2026-08-21.md",
+  "agent": "octo_base",
+  "frames": "bridge_subset, deterministic even-stride selection",
+  "n_frames": 120,
+  "keep_ratios": {
+    "fov_crop": [
+      0.9,
+      0.75,
+      0.6
+    ],
+    "resolution": [
+      0.75,
+      0.5,
+      0.33
+    ]
+  },
+  "equal_pixel_budget_pair": {
+    "fov_crop": 0.75,
+    "resolution": 0.75
+  },
+  "paired_determinism_max_abs_diff": 0.0,
+  "readout": "L2 of (perturbed - clean) action vector, pose dims only (gripper dim 6 excluded); chunk models: first step primary",
+  "mean_action_displacement": {
+    "fov_crop": {
+      "0.9": 0.03381557879745645,
+      "0.75": 0.04786955062363522,
+      "0.6": 0.06418414777821034
+    },
+    "resolution": {
+      "0.75": 0.021192804347346175,
+      "0.5": 0.0318487674391916,
+      "0.33": 0.045002262701293975
+    }
+  },
+  "n_per_dose": {
+    "fov_crop": {
+      "0.9": 120,
+      "0.75": 120,
+      "0.6": 120
+    },
+    "resolution": {
+      "0.75": 120,
+      "0.5": 120,
+      "0.33": 120
+    }
+  },
+  "secondary_chunk_mean_displacement": {
+    "fov_crop": {
+      "0.9": 0.030647888685280802,
+      "0.75": 0.04767071498795592,
+      "0.6": 0.059776363806449545
+    },
+    "resolution": {
+      "0.75": 0.02082176434291503,
+      "0.5": 0.030313908689446285,
+      "0.33": 0.04150539227601538
+    }
+  },
+  "perturb_impl": "fov: scripts/72 fov_apply verbatim; res: scripts/73 fov_apply verbatim; on model input image before the official preprocessing path",
+  "model_meta": {
+    "model_id": "rail-berkeley/octo-base-1.5",
+    "revision": "ee3c10e8edd6ce2e8b1e8744d3c6fba4097bed48",
+    "local_dir": "/work/checkpoints/manip/octo-base-1.5",
+    "params": "93M",
+    "route": "octo repo 241fb351, OctoModel.load_pretrained + create_tasks + sample_actions",
+    "jax_devices": "[cuda(id=0)]",
+    "unnorm_stats": "checkpoint dataset_statistics['bridge_dataset']['action'] (native bridge)",
+    "chunk": 4,
+    "gripper_dim": 6,
+    "pose_dims": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "wrist_camera": "not fed (absent key; official mask mechanism)",
+    "sampler_seed": 0
+  },
+  "repo_commit": "358481bf020f982b86c352aaa5510adcc0c20673"
+}

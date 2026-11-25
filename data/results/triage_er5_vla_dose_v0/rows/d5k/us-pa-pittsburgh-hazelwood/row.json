@@ -1,0 +1,102 @@
+{
+  "exp_id": "triage_er5_vla_dose_v0",
+  "decision_packet": "docs/TRIAGE_DTR6_VLA_REPAIR_2026-08-23.md",
+  "agent": "d5k",
+  "city": "us-pa-pittsburgh-hazelwood",
+  "input_mode": "native",
+  "budget_minutes": 10,
+  "n_frames_planned": 1191,
+  "plan_horizon_pts": 8,
+  "plan_rate_hz": 2.0,
+  "sign_diagnostic_agreement": 0.9583333333333334,
+  "frame_accounting": {
+    "n_window_frames": 1200,
+    "n_skipped_short_history": 9,
+    "n_failed_unknown_command": 0,
+    "n_failed_unattributed": 0,
+    "unattributed_examples": [],
+    "n_planned": 1191,
+    "closes": true,
+    "labels": {
+      "n_failed_unknown_command": "known_native_infeasible_unknown_command \u2014 frame's driving_command argmax == 3 (UNKNOWN); the carrier's deployment forward maps only left/straight/right and raises. Registered in packet s1; verified per frame here, not assumed",
+      "n_skipped_short_history": "known_protocol_boundary_short_history \u2014 fewer than 4 in-log history frames at a log's start; the 4-frame window cannot be built",
+      "n_failed_unattributed": "unattributed_frame_failure \u2014 cause NOT established; exceptions recorded verbatim, never absorbed"
+    }
+  },
+  "noise_seeding": "torch.manual_seed(sha256(token)[:4]) before every compute_trajectory (packet s3 instrument; identical across variants and passes)",
+  "l2_vs_human": {
+    "all": {
+      "mean_l2_at_2s": 0.48946809053323853,
+      "n": 1179
+    },
+    "turn": {
+      "mean_l2_at_2s": 0.714197312752748,
+      "n": 59
+    },
+    "straight": {
+      "mean_l2_at_2s": 0.4776296761484608,
+      "n": 1120
+    },
+    "n_skipped_no_gt": 12
+  },
+  "l2_definition": "L2 between plan point at 2 s (4th of 8 wp @2Hz) and human position at 2 s, frozen ego frame; turning = |d yaw over 2 s| >= 15 deg",
+  "namespace": "triage repair experiments; never navtest PDMS; never enters m4/G2",
+  "repo_commit": "346d108e75af702ec6315bfcd8806fc482f2230f",
+  "probe_schema": {
+    "id": "probe_schema_v1",
+    "sha256": "90a3f22fbc08898b8cbfbcab43cef83d3f59fc8a9f3f61066d0ea13c4da447cf"
+  },
+  "row": {
+    "values": {
+      "traj_diff_norm_mean": 0.5009305185162612,
+      "traj_diff_norm_p95": 1.4096934310996856,
+      "plan_jitter_lowband_power": 0.9627233362721159,
+      "kinematic_violation_rate": 0.0,
+      "offroad_rate": NaN,
+      "invalid_output_rate": 0.0,
+      "gamma_response_auc": 0.07916798467968525,
+      "jpeg_response_auc": 0.05371769816341593,
+      "fov_crop_response_auc": NaN,
+      "output_w1_vs_source_reference": NaN,
+      "confidence_mean": NaN,
+      "multimodal_disagreement": NaN,
+      "language_action_consistency": NaN,
+      "bev_occupancy_entropy": NaN,
+      "candidate_trajectory_spread": NaN
+    },
+    "availability_mask": {
+      "traj_diff_norm_mean": 1,
+      "traj_diff_norm_p95": 1,
+      "plan_jitter_lowband_power": 1,
+      "kinematic_violation_rate": 1,
+      "offroad_rate": 0,
+      "invalid_output_rate": 1,
+      "gamma_response_auc": 1,
+      "jpeg_response_auc": 1,
+      "fov_crop_response_auc": 0,
+      "output_w1_vs_source_reference": 0,
+      "confidence_mean": 0,
+      "multimodal_disagreement": 0,
+      "language_action_consistency": 0,
+      "bev_occupancy_entropy": 0,
+      "candidate_trajectory_spread": 0
+    },
+    "families": {
+      "traj_diff_norm_mean": "output_stability",
+      "traj_diff_norm_p95": "output_stability",
+      "plan_jitter_lowband_power": "output_stability",
+      "kinematic_violation_rate": "trajectory_legality",
+      "offroad_rate": "trajectory_legality",
+      "invalid_output_rate": "trajectory_legality",
+      "gamma_response_auc": "perturbation_sensitivity",
+      "jpeg_response_auc": "perturbation_sensitivity",
+      "fov_crop_response_auc": "perturbation_sensitivity",
+      "output_w1_vs_source_reference": "distribution_drift",
+      "confidence_mean": "distribution_drift",
+      "multimodal_disagreement": "distribution_drift",
+      "language_action_consistency": "native_diagnostics",
+      "bev_occupancy_entropy": "native_diagnostics",
+      "candidate_trajectory_spread": "native_diagnostics"
+    }
+  }
+}

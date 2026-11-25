@@ -1,0 +1,559 @@
+{
+  "exp_id": "claim_a_readout_v0",
+  "matrix": "outputs/m4_matrix_v1/outcomes.jsonl",
+  "n_rows": 450,
+  "metric": "route_completion_fraction x100 (frozen primitive primary; DS deliberately NOT used for ranking)",
+  "per_env": {
+    "Town03_w0": {
+      "tcp_front": {
+        "completion_mean": 57.608000000000004,
+        "seed_sd": 0.5014698395716273,
+        "n_seeds": 3,
+        "collision_route_rate": 0.6,
+        "safety_blocked": true
+      },
+      "uniad_6cam": {
+        "completion_mean": 33.61599999999999,
+        "seed_sd": 5.103769587275662,
+        "n_seeds": 3,
+        "collision_route_rate": 0.3333333333333333,
+        "safety_blocked": false
+      },
+      "vad_6cam": {
+        "completion_mean": 66.934,
+        "seed_sd": 9.107727488237671,
+        "n_seeds": 3,
+        "collision_route_rate": 0.5333333333333333,
+        "safety_blocked": true
+      },
+      "simlingo_front": {
+        "completion_mean": 84.18266666666666,
+        "seed_sd": 5.246959246395323,
+        "n_seeds": 3,
+        "collision_route_rate": 0.06666666666666667,
+        "safety_blocked": false
+      },
+      "uniad_front_zero": {
+        "completion_mean": 47.331999999999994,
+        "seed_sd": 9.375675975629711,
+        "n_seeds": 3,
+        "collision_route_rate": 0.3333333333333333,
+        "safety_blocked": false
+      }
+    },
+    "Town03_w13": {
+      "tcp_front": {
+        "completion_mean": 58.35999999999999,
+        "seed_sd": 8.702335715267317e-15,
+        "n_seeds": 3,
+        "collision_route_rate": 0.6,
+        "safety_blocked": true
+      },
+      "uniad_6cam": {
+        "completion_mean": 40.92666666666667,
+        "seed_sd": 7.107906958685748,
+        "n_seeds": 3,
+        "collision_route_rate": 0.4666666666666667,
+        "safety_blocked": false
+      },
+      "vad_6cam": {
+        "completion_mean": 62.952000000000005,
+        "seed_sd": 1.4701115603926131,
+        "n_seeds": 3,
+        "collision_route_rate": 0.4666666666666667,
+        "safety_blocked": false
+      },
+      "simlingo_front": {
+        "completion_mean": 98.02066666666667,
+        "seed_sd": 3.428305898447999,
+        "n_seeds": 3,
+        "collision_route_rate": 0.13333333333333333,
+        "safety_blocked": false
+      },
+      "uniad_front_zero": {
+        "completion_mean": 53.34466666666666,
+        "seed_sd": 15.51509772232625,
+        "n_seeds": 3,
+        "collision_route_rate": 0.26666666666666666,
+        "safety_blocked": false
+      }
+    },
+    "Town12_w0": {
+      "tcp_front": {
+        "completion_mean": 80.61800000000001,
+        "seed_sd": 0.0,
+        "n_seeds": 3,
+        "collision_route_rate": 0.6,
+        "safety_blocked": true
+      },
+      "uniad_6cam": {
+        "completion_mean": 45.71266666666667,
+        "seed_sd": 10.053177474477074,
+        "n_seeds": 3,
+        "collision_route_rate": 0.5333333333333333,
+        "safety_blocked": true
+      },
+      "vad_6cam": {
+        "completion_mean": 49.294000000000004,
+        "seed_sd": 0.26949582557063884,
+        "n_seeds": 3,
+        "collision_route_rate": 0.3333333333333333,
+        "safety_blocked": false
+      },
+      "simlingo_front": {
+        "completion_mean": 95.46999999999998,
+        "seed_sd": 0.41915629543166777,
+        "n_seeds": 3,
+        "collision_route_rate": 0.3333333333333333,
+        "safety_blocked": false
+      },
+      "uniad_front_zero": {
+        "completion_mean": 43.74133333333333,
+        "seed_sd": 3.031674344868416,
+        "n_seeds": 3,
+        "collision_route_rate": 0.5333333333333333,
+        "safety_blocked": true
+      }
+    },
+    "Town12_w13": {
+      "tcp_front": {
+        "completion_mean": 80.61800000000001,
+        "seed_sd": 0.0,
+        "n_seeds": 3,
+        "collision_route_rate": 0.6,
+        "safety_blocked": true
+      },
+      "uniad_6cam": {
+        "completion_mean": 54.40133333333333,
+        "seed_sd": 4.858979865499888,
+        "n_seeds": 3,
+        "collision_route_rate": 0.6666666666666666,
+        "safety_blocked": true
+      },
+      "vad_6cam": {
+        "completion_mean": 40.74933333333333,
+        "seed_sd": 6.355443755815426,
+        "n_seeds": 3,
+        "collision_route_rate": 0.2,
+        "safety_blocked": false
+      },
+      "simlingo_front": {
+        "completion_mean": 88.02333333333333,
+        "seed_sd": 6.872420922304838,
+        "n_seeds": 3,
+        "collision_route_rate": 0.26666666666666666,
+        "safety_blocked": false
+      },
+      "uniad_front_zero": {
+        "completion_mean": 54.53933333333333,
+        "seed_sd": 4.272373735212469,
+        "n_seeds": 3,
+        "collision_route_rate": 0.8,
+        "safety_blocked": true
+      }
+    },
+    "Town13_w0": {
+      "tcp_front": {
+        "completion_mean": 86.678,
+        "seed_sd": 0.3464101615137804,
+        "n_seeds": 3,
+        "collision_route_rate": 0.06666666666666667,
+        "safety_blocked": false
+      },
+      "uniad_6cam": {
+        "completion_mean": 90.62466666666667,
+        "seed_sd": 16.238553671227415,
+        "n_seeds": 3,
+        "collision_route_rate": 0.4,
+        "safety_blocked": false
+      },
+      "vad_6cam": {
+        "completion_mean": 79.73,
+        "seed_sd": 8.241097742412718,
+        "n_seeds": 3,
+        "collision_route_rate": 0.26666666666666666,
+        "safety_blocked": false
+      },
+      "simlingo_front": {
+        "completion_mean": 100.0,
+        "seed_sd": 0.0,
+        "n_seeds": 3,
+        "collision_route_rate": 0.0,
+        "safety_blocked": false
+      },
+      "uniad_front_zero": {
+        "completion_mean": 76.66666666666667,
+        "seed_sd": 4.894041002416441,
+        "n_seeds": 3,
+        "collision_route_rate": 0.4,
+        "safety_blocked": false
+      }
+    },
+    "Town13_w13": {
+      "tcp_front": {
+        "completion_mean": 88.18066666666668,
+        "seed_sd": 1.1269877254581484,
+        "n_seeds": 3,
+        "collision_route_rate": 0.4,
+        "safety_blocked": false
+      },
+      "uniad_6cam": {
+        "completion_mean": 84.824,
+        "seed_sd": 14.194515701495423,
+        "n_seeds": 3,
+        "collision_route_rate": 0.4666666666666667,
+        "safety_blocked": false
+      },
+      "vad_6cam": {
+        "completion_mean": 79.41799999999999,
+        "seed_sd": 8.327700282791167,
+        "n_seeds": 3,
+        "collision_route_rate": 0.3333333333333333,
+        "safety_blocked": false
+      },
+      "simlingo_front": {
+        "completion_mean": 100.0,
+        "seed_sd": 0.0,
+        "n_seeds": 3,
+        "collision_route_rate": 0.06666666666666667,
+        "safety_blocked": false
+      },
+      "uniad_front_zero": {
+        "completion_mean": 71.874,
+        "seed_sd": 0.0,
+        "n_seeds": 3,
+        "collision_route_rate": 0.4,
+        "safety_blocked": false
+      }
+    }
+  },
+  "rankings": {
+    "Town03_w0": [
+      "simlingo_front",
+      "vad_6cam",
+      "tcp_front",
+      "uniad_front_zero",
+      "uniad_6cam"
+    ],
+    "Town03_w13": [
+      "simlingo_front",
+      "vad_6cam",
+      "tcp_front",
+      "uniad_front_zero",
+      "uniad_6cam"
+    ],
+    "Town12_w0": [
+      "simlingo_front",
+      "tcp_front",
+      "vad_6cam",
+      "uniad_6cam",
+      "uniad_front_zero"
+    ],
+    "Town12_w13": [
+      "simlingo_front",
+      "tcp_front",
+      "uniad_front_zero",
+      "uniad_6cam",
+      "vad_6cam"
+    ],
+    "Town13_w0": [
+      "simlingo_front",
+      "uniad_6cam",
+      "tcp_front",
+      "vad_6cam",
+      "uniad_front_zero"
+    ],
+    "Town13_w13": [
+      "simlingo_front",
+      "tcp_front",
+      "uniad_6cam",
+      "vad_6cam",
+      "uniad_front_zero"
+    ]
+  },
+  "native_rank_changes": [
+    {
+      "env_a": "Town03_w0",
+      "env_b": "Town12_w0",
+      "rank_a": [
+        "simlingo_front",
+        "vad_6cam",
+        "tcp_front",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "vad_6cam",
+        "uniad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town03_w0",
+      "env_b": "Town12_w13",
+      "rank_a": [
+        "simlingo_front",
+        "vad_6cam",
+        "tcp_front",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "uniad_6cam",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town03_w0",
+      "env_b": "Town13_w0",
+      "rank_a": [
+        "simlingo_front",
+        "vad_6cam",
+        "tcp_front",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "uniad_6cam",
+        "tcp_front",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town03_w0",
+      "env_b": "Town13_w13",
+      "rank_a": [
+        "simlingo_front",
+        "vad_6cam",
+        "tcp_front",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "uniad_6cam",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town03_w13",
+      "env_b": "Town12_w0",
+      "rank_a": [
+        "simlingo_front",
+        "vad_6cam",
+        "tcp_front",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "vad_6cam",
+        "uniad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town03_w13",
+      "env_b": "Town12_w13",
+      "rank_a": [
+        "simlingo_front",
+        "vad_6cam",
+        "tcp_front",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "uniad_6cam",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town03_w13",
+      "env_b": "Town13_w0",
+      "rank_a": [
+        "simlingo_front",
+        "vad_6cam",
+        "tcp_front",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "uniad_6cam",
+        "tcp_front",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town03_w13",
+      "env_b": "Town13_w13",
+      "rank_a": [
+        "simlingo_front",
+        "vad_6cam",
+        "tcp_front",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "uniad_6cam",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town12_w0",
+      "env_b": "Town12_w13",
+      "rank_a": [
+        "simlingo_front",
+        "tcp_front",
+        "vad_6cam",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "uniad_6cam",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town12_w0",
+      "env_b": "Town13_w0",
+      "rank_a": [
+        "simlingo_front",
+        "tcp_front",
+        "vad_6cam",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "uniad_6cam",
+        "tcp_front",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town12_w0",
+      "env_b": "Town13_w13",
+      "rank_a": [
+        "simlingo_front",
+        "tcp_front",
+        "vad_6cam",
+        "uniad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "uniad_6cam",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town12_w13",
+      "env_b": "Town13_w0",
+      "rank_a": [
+        "simlingo_front",
+        "tcp_front",
+        "uniad_6cam",
+        "vad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "uniad_6cam",
+        "tcp_front",
+        "vad_6cam"
+      ]
+    },
+    {
+      "env_a": "Town13_w0",
+      "env_b": "Town13_w13",
+      "rank_a": [
+        "simlingo_front",
+        "uniad_6cam",
+        "tcp_front",
+        "vad_6cam"
+      ],
+      "rank_b": [
+        "simlingo_front",
+        "tcp_front",
+        "uniad_6cam",
+        "vad_6cam"
+      ]
+    }
+  ],
+  "interaction_vs_noise": {
+    "tcp_front": {
+      "env_spread": 30.572666666666677,
+      "median_seed_sd": 0.17320508075689456
+    },
+    "uniad_6cam": {
+      "env_spread": 57.00866666666668,
+      "median_seed_sd": 8.580542216581412
+    },
+    "vad_6cam": {
+      "env_spread": 38.98066666666667,
+      "median_seed_sd": 7.298270749114073
+    },
+    "simlingo_front": {
+      "env_spread": 15.817333333333337,
+      "median_seed_sd": 1.9237310969398334
+    },
+    "uniad_front_zero": {
+      "env_spread": 32.92533333333334,
+      "median_seed_sd": 4.583207368814454
+    }
+  },
+  "front_zero_cost_by_env": {
+    "Town03_w0": {
+      "cost_completion": -13.716000000000001,
+      "noise_bound": 9.375675975629711
+    },
+    "Town03_w13": {
+      "cost_completion": -12.417999999999992,
+      "noise_bound": 15.51509772232625
+    },
+    "Town12_w0": {
+      "cost_completion": 1.971333333333341,
+      "noise_bound": 10.053177474477074
+    },
+    "Town12_w13": {
+      "cost_completion": -0.13799999999999812,
+      "noise_bound": 4.858979865499888
+    },
+    "Town13_w0": {
+      "cost_completion": 13.957999999999998,
+      "noise_bound": 16.238553671227415
+    },
+    "Town13_w13": {
+      "cost_completion": 12.950000000000003,
+      "noise_bound": 14.194515701495423
+    }
+  },
+  "exploratory_l1": {
+    "tcp_front": {
+      "spearman_completion_vs_z": -0.48571428571428577,
+      "n_envs": 6
+    },
+    "uniad_6cam": {
+      "spearman_completion_vs_z": -0.4285714285714286,
+      "n_envs": 6
+    },
+    "vad_6cam": {
+      "spearman_completion_vs_z": 0.48571428571428577,
+      "n_envs": 6
+    },
+    "simlingo_front": {
+      "spearman_completion_vs_z": -0.14285714285714288,
+      "n_envs": 6
+    },
+    "uniad_front_zero": {
+      "spearman_completion_vs_z": 0.08571428571428573,
+      "n_envs": 6
+    }
+  },
+  "provenance": {
+    "repo_commit": "889fcfab8effd2c99771201a00c39226facceefb",
+    "generator": "scripts/37_claim_a_readout.py"
+  },
+  "evidence_level": "first formal cross-environment analysis on the complete frozen grid; L1 section exploratory"
+}

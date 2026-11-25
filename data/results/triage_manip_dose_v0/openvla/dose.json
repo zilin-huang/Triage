@@ -1,0 +1,74 @@
+{
+  "exp_id": "triage_manip_dose_v0",
+  "decision_packet": "docs/TRIAGE_DTR2_MANIPULATION_PORTABILITY_2026-08-21.md",
+  "agent": "openvla",
+  "frames": "bridge_subset, deterministic even-stride selection",
+  "n_frames": 120,
+  "keep_ratios": {
+    "fov_crop": [
+      0.9,
+      0.75,
+      0.6
+    ],
+    "resolution": [
+      0.75,
+      0.5,
+      0.33
+    ]
+  },
+  "equal_pixel_budget_pair": {
+    "fov_crop": 0.75,
+    "resolution": 0.75
+  },
+  "paired_determinism_max_abs_diff": 0.0,
+  "readout": "L2 of (perturbed - clean) action vector, pose dims only (gripper dim 6 excluded); chunk models: first step primary",
+  "mean_action_displacement": {
+    "fov_crop": {
+      "0.9": 0.05662764991235544,
+      "0.75": 0.06945907547487143,
+      "0.6": 0.08138360234067736
+    },
+    "resolution": {
+      "0.75": 0.038365280966979665,
+      "0.5": 0.05795633959035943,
+      "0.33": 0.07012284206895286
+    }
+  },
+  "n_per_dose": {
+    "fov_crop": {
+      "0.9": 120,
+      "0.75": 120,
+      "0.6": 120
+    },
+    "resolution": {
+      "0.75": 120,
+      "0.5": 120,
+      "0.33": 120
+    }
+  },
+  "secondary_chunk_mean_displacement": {
+    "fov_crop": {
+      "0.9": null,
+      "0.75": null,
+      "0.6": null
+    },
+    "resolution": {
+      "0.75": null,
+      "0.5": null,
+      "0.33": null
+    }
+  },
+  "perturb_impl": "fov: scripts/72 fov_apply verbatim; res: scripts/73 fov_apply verbatim; on model input image before the official preprocessing path",
+  "model_meta": {
+    "model_id": "openvla/openvla-7b",
+    "revision": "47a0ec7fc4ec123775a391911046cf33cf9ed83f",
+    "local_dir": "/work/checkpoints/manip/openvla-7b",
+    "unnorm_key": "bridge_orig",
+    "attn_implementation": "sdpa",
+    "dtype": "bfloat16",
+    "action_dim": 7,
+    "gripper_dim": 6,
+    "chunk": 1
+  },
+  "repo_commit": "352dc5ae6c9e264a1b738c1365882a5310d757b5"
+}

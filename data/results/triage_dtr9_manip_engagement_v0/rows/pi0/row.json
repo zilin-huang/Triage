@@ -1,0 +1,72 @@
+{
+  "packet": "docs/TRIAGE_DTR9_MANIP_ENGAGEMENT_2026-08-24.md",
+  "model": "pi0",
+  "model_id": "lerobot/pi0_base",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "n_frames_ok": 120,
+  "n_frames_chosen": 120,
+  "gripper_dim": 6,
+  "chunk": 50,
+  "dose_displacement_mean": {
+    "fov_crop": 1.3334194150487615,
+    "resolution": 0.7388568997855424
+  },
+  "dose_per_keep": {
+    "fov_crop": {
+      "0.9": 0.6609687320550567,
+      "0.75": 1.348772638629269,
+      "0.6": 1.9905168744619581
+    },
+    "resolution": {
+      "0.75": 0.5737993932907858,
+      "0.5": 0.7050289669755938,
+      "0.33": 0.9377423390902474
+    }
+  },
+  "chunk_secondary": {
+    "dose": {
+      "fov_crop": {
+        "0.9": 0.6071081654570615,
+        "0.75": 1.2264036907570517,
+        "0.6": 1.6774923022150106
+      },
+      "resolution": {
+        "0.75": 0.4746349968987572,
+        "0.5": 0.5852822987131063,
+        "0.33": 0.8111117001418646
+      }
+    },
+    "anchor": {
+      "gray": 1.7332464206665132,
+      "noise": 1.7494572675500184
+    }
+  },
+  "displacement_convention": "first step of the action chunk (primary)",
+  "anchor": {
+    "D_gray": 1.777146930641097,
+    "D_noise": 1.8390801724012293,
+    "n_gray": 120,
+    "n_noise": 120
+  },
+  "engagement_normalized": {
+    "fov_crop": 0.7503146712622896,
+    "resolution": 0.41575453725652467
+  },
+  "repeat_floor": {
+    "per_k": {
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0
+    },
+    "mean": 0.0,
+    "n_per_k": {
+      "2": 120,
+      "3": 120,
+      "4": 120
+    }
+  },
+  "cross_model_attributable": true,
+  "asymmetry_note": "kappa_fov/kappa_res == Dbar_fov/Dbar_res by identity; the within-model asymmetry is invariant under normalisation and is NOT tested here (packet sec.1)",
+  "repo_commit": "45013c990c95c56b36fde2f71fc99d8612747fae"
+}

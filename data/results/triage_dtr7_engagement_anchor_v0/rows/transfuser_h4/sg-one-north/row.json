@@ -1,0 +1,45 @@
+{
+  "packet": "docs/TRIAGE_DTR7_ENGAGEMENT_ANCHOR_2026-08-23.md",
+  "config_id": "transfuser_h4",
+  "trim_horizon": 4,
+  "city": "sg-one-north",
+  "evidence_level": "real_run",
+  "limit_frames": null,
+  "carrier_state": "stateless_per_frame",
+  "n_baseline_plans": 1197,
+  "n_model_failures": 0,
+  "n_perturb_frames": 120,
+  "n_ablated_views_per_frame": 8,
+  "probe_schema_id": "probe_schema_v1",
+  "probe_schema_sha256": "90a3f22fbc08898b8cbfbcab43cef83d3f59fc8a9f3f61066d0ea13c4da447cf",
+  "dose_displacement_mean": {
+    "gamma": 0.09332458895287474,
+    "jpeg": 0.044846631710707914
+  },
+  "anchor": {
+    "D_gray": 0.2009216568943818,
+    "D_noise": 0.17099163804327222,
+    "n_gray": 120,
+    "n_noise": 120
+  },
+  "engagement_normalized": {
+    "gamma": 0.4644824773764062,
+    "jpeg": 0.22320456840689096
+  },
+  "instrument_checks": {
+    "paired_determinism_max_abs_delta": 0.0,
+    "blind_anchor_expected_zero": false,
+    "blind_anchor_holds": null,
+    "monotonicity_D_gray_gt_doses": true,
+    "pass_order": [
+      "gamma1.8",
+      "gamma2.6",
+      "jpeg50",
+      "jpeg20",
+      "gray",
+      "noise",
+      "gray_repeat"
+    ]
+  },
+  "repo_commit": "45013c990c95c56b36fde2f71fc99d8612747fae"
+}

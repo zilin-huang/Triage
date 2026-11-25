@@ -1,0 +1,14 @@
+{
+ "deadline_s": 1.2,
+ "warmup_plans_dropped": 20,
+ "benchmark_pdms": {
+  "DriveVA": 91.22,
+  "ReCogDrive": 90.42,
+  "DriveVLA-W0": 90.3,
+  "LTF": 84.14
+ },
+ "driving_p95_s": {
+  "LTF": 0.8640388250350952
+ },
+ "note": "driving_p95_s: 95th percentile of the end-to-end latency of LTF on a hand-driven trip; the gate uses the larger of the parked and driving values"
+}
